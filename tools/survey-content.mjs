@@ -18,7 +18,7 @@ export const SURVEY = {
     ["Wei Chen", [2]],
     ["Hongzhan Lin", [1], true],
   ],
-  affiliations: ["National University of Singapore", "Huazhong University of Science and Technology", "NTU", "Hong Kong Baptist University"],
+  affiliations: ["NUS", "HUST", "NTU", "HKBU"],
   bibtexKey: "luo2026physicalrsi",
 };
 

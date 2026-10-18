@@ -10,7 +10,7 @@
   <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome" height="18"></a>
 
   <p>Meng Luo<sup>1</sup> · Zechen Bai<sup>1</sup> · Shanqing Xu<sup>2</sup> · Yanlin Li<sup>1</sup> · Kaixin Li<sup>1</sup> · Mengchen Qian<sup>2</sup> · Ran Zhang<sup>3</sup> · Ziyang Luo<sup>4</sup> · Wei Chen<sup>2</sup> · Hongzhan Lin<sup>1*</sup></p>
-  <p><sub><sup>1</sup> National University of Singapore &nbsp;·&nbsp; <sup>2</sup> Huazhong University of Science and Technology &nbsp;·&nbsp; <sup>3</sup> NTU &nbsp;·&nbsp; <sup>4</sup> Hong Kong Baptist University</sub></p>
+  <p><sub><sup>1</sup> NUS &nbsp;·&nbsp; <sup>2</sup> HUST &nbsp;·&nbsp; <sup>3</sup> NTU &nbsp;·&nbsp; <sup>4</sup> HKBU</sub></p>
   <p><sub>* Corresponding author</sub></p>
 </div>
 
