@@ -5,7 +5,7 @@ export const SURVEY = {
   title: "Toward Recursive Self-Improvement in Physical AI",
   subtitle: "Foundations, Mechanisms, and Open Problems",
   year: 2026,
-  // [name, affiliation numbers]
+  // [name, affiliation numbers, corresponding author (optional)]
   authors: [
     ["Meng Luo", [1]],
     ["Zechen Bai", [1]],
@@ -13,11 +13,12 @@ export const SURVEY = {
     ["Yanlin Li", [1]],
     ["Kaixin Li", [1]],
     ["Mengchen Qian", [2]],
-    ["Ziyang Luo", [3]],
+    ["Ran Zhang", [3]],
+    ["Ziyang Luo", [4]],
     ["Wei Chen", [2]],
-    ["Hongzhan Lin", [1]],
+    ["Hongzhan Lin", [1], true],
   ],
-  affiliations: ["National University of Singapore", "Huazhong University of Science and Technology", "Hong Kong Baptist University"],
+  affiliations: ["National University of Singapore", "Huazhong University of Science and Technology", "NTU", "Hong Kong Baptist University"],
   bibtexKey: "luo2026physicalrsi",
 };
 
@@ -49,7 +50,7 @@ export const FIGURES = {
   6: ["Where models, policies, and physical data change in SILVR, RISE, PlayWorld, and VLAW.", ""],
   7: ["Three forms of external knowledge in the grasp example.", "Each panel shows one saved form of the slip repair and representative systems from this section; reuse on another robot first checks the interface."],
   8: ["Does a revised component help the next learner?", "Two matched learners differ only in the component under test, here an evaluator. Their common outcome check stays fixed and separate from that evaluator; comparing the learners' outcomes tests procedure improvement."],
-  9: ["A proposed test of the two links of recursive self-improvement (R1 and R2).", "In R2, self-revision with frozen or acquired knowledge first produces the control or next improver, respectively. Each then revises a learning procedure, tested through fresh matched learners under a common, protected outcome check."],
+  9: ["A proposed test of the two links of recursive self-improvement (R1 and R2).", "In R2, self-revision with frozen or acquired knowledge first produces the control or next improver, respectively. Each then revises a learning procedure, which is tested through fresh matched learners under a common, protected outcome check."],
 };
 // file of each figure under assets/readme/figures (Figure 1 is a painting, kept as WebP)
 export const FIGURE_FILE = (number) => `assets/readme/figures/figure-${number}.${number === 1 ? "webp" : "png"}`;
@@ -83,7 +84,7 @@ export const OUTLINE = [
 ];
 
 export const RECURSION = [
-  ["The first three claims already have support.", "Existing studies show behavioral improvement, later-learning benefit, and procedure improvement; some systems also change their improver's knowledge or tools."],
+  ["The first three claims already have support.", "Existing studies show behavioral improvement, later-learning benefit, and procedure improvement; some systems also change their improver's knowledge or tools. For R1 and R2, the survey distinguishes mechanism only, uncontrolled results, and controlled results; evidence for an earlier claim does not establish a later one."],
   ["R1: repair knowledge must improve the improver.", "Give the improver, with its earlier and with its acquired repair knowledge, the same new failure histories, tools, objectives, and budget; apply the learning procedures each produces to matched learners and compare common physical outcomes."],
   ["R2: the improved improver must help improve itself.", "Let the updated improver propose a revision of itself and compare it with a control revision proposed with its earlier knowledge frozen; repeating the first test on the resulting improvers links further gains to what was learned."],
   ["Where to start.", "Reward construction and skill-library editing yield inspectable revisions that simulation can screen, leaving four hardware-trained learners per seed. Eureka (a reward improver whose knowledge does not change) and PRACTICE (a learned skill editor whose own improver is fixed) already supply baselines."],
@@ -106,7 +107,7 @@ export const PROGRAMS = [
 ];
 
 export const CLOSING =
-  "Physical recursive self-improvement will be demonstrated not when a robot changes many times, but when knowledge of why one repair worked causally improves how the next repair is made.";
+  "Physical recursive self-improvement will be demonstrated not when a robot changes many times, but when knowledge of why one repair worked causally improves how the next repair is made, and when that improved capability, applied to new evidence, helps improve itself again without losing the ability to keep learning.";
 
 // BibTeX entry shared by the README and the website
 export function surveyBibtex(url) {

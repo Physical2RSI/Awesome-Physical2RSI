@@ -2,9 +2,11 @@
 
 ## Current release
 
-The manuscript is not yet public. With the authors' approval, the README and the website's survey section carry a summary of the survey: the title and subtitle, author names and affiliations, the research questions, the framework and its four conditions, Figures 1 to 9, the survey's robot illustrations, the open problems, a teaser illustration, and a manuscript citation. The text lives in `tools/survey-content.mjs` and the figures in `assets/readme/figures/`; `npm run readme` renders both the README and the website section, and `tools/check.mjs` fails if either is out of date. Keep the content in step with the manuscript.
+The manuscript is not yet public. With the authors' approval, the README and the website's survey section carry a summary of the survey: the title and subtitle, author names, affiliations, and the corresponding-author mark, the research questions, the framework and its four conditions, Figures 1 to 9, the survey's robot illustrations, the open problems, a teaser illustration, and a manuscript citation. The text lives in `tools/survey-content.mjs` and the figures in `assets/readme/figures/`; `npm run readme` renders both the README and the website section, and `tools/check.mjs` fails if either is out of date. Keep the content in step with the manuscript.
 
 Until the paper is public, the site carries no scholarly metadata (`citation_*` meta tags or `ScholarlyArticle` structured data), and the checks continue to enforce this. No manuscript PDF, source, or other figure is published.
+
+The latest synchronization was checked against the author-supplied manuscript dated 18 October 2026. The shared content records ten authors across four affiliations, including the corresponding-author mark, and the citation uses that author order. The four conditions, research questions, five-section outline, six open problems, and all nine figure assets were checked against the manuscript. Existing figure assets match the current diagrams and are retained. All 343 bibliography records match the supplied bibliography, with the previously verified PISA publication link preserved where the source omits it.
 
 ## When the paper is public
 

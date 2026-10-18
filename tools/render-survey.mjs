@@ -80,7 +80,7 @@ const GITHUB_ICON =
 // The hero: the paper's title, authors and links over the night sky, with the teaser painting framed beside them.
 export function renderHero() {
   const authors = SURVEY.authors
-    .map(([name, affiliations]) => `<span>${html(name)}<sup>${affiliations.join(",")}</sup></span>`)
+    .map(([name, affiliations, corresponding]) => `<span>${html(name)}<sup>${affiliations.join(",")}${corresponding ? "*" : ""}</sup></span>`)
     .join("");
   const affiliations = SURVEY.affiliations.map((name, i) => `<span><sup>${i + 1}</sup>${html(name)}</span>`).join("");
   return [
@@ -92,6 +92,9 @@ export function renderHero() {
     `      <p class="hero-subtitle">${html(SURVEY.subtitle)}</p>`,
     `      <p class="hero-authors">${authors}</p>`,
     `      <p class="hero-affiliations">${affiliations}</p>`,
+    ...(SURVEY.authors.some(([, , corresponding]) => corresponding)
+      ? ['      <p class="hero-correspondence">* Corresponding author</p>']
+      : []),
     '      <div class="hero-actions">',
     `        <a href="#survey" class="button button-gold">Read the survey${ICON('<path d="M8 2.5v10M3.5 8.5 8 13l4.5-4.5"/>')}</a>`,
     `        <a href="#references" class="button button-glass">${ICON('<path d="M2.5 3.5h4l1.5 1.5v8l-1.5-1H2.5zM13.5 3.5h-4L8 5v8l1.5-1h4z"/>')}Reference library</a>`,

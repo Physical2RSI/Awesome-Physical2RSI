@@ -160,10 +160,13 @@ export function renderReadme(references) {
     "",
     "  <p>" +
       SURVEY.authors
-        .map(([name, affiliations]) => `${html(name)}<sup>${affiliations.join(",")}</sup>`)
+        .map(([name, affiliations, corresponding]) => `${html(name)}<sup>${affiliations.join(",")}${corresponding ? "*" : ""}</sup>`)
         .join(" · ") +
       "</p>",
     `  <p><sub>${SURVEY.affiliations.map((name, i) => `<sup>${i + 1}</sup> ${html(name)}`).join(" &nbsp;·&nbsp; ")}</sub></p>`,
+    ...(SURVEY.authors.some(([, , corresponding]) => corresponding)
+      ? ["  <p><sub>* Corresponding author</sub></p>"]
+      : []),
     "</div>",
     "",
   );

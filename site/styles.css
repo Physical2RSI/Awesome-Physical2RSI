@@ -321,6 +321,14 @@ button {
   font-size: 11px;
   color: #aebde0;
 }
+.hero-affiliations:has(+ .hero-correspondence) {
+  margin-bottom: 6px;
+}
+.hero-correspondence {
+  margin: 0 0 26px;
+  font-size: 11px;
+  color: #aebde0;
+}
 .hero-authors sup,
 .hero-affiliations sup {
   margin-left: 1px;

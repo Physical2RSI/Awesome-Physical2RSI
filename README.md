@@ -9,8 +9,9 @@
   <a href="LICENSE"><img src="https://img.shields.io/static/v1?label=&amp;message=Code%3A+MIT&amp;color=65716e&amp;style=flat-square" alt="Code: MIT" height="18"></a>
   <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome" height="18"></a>
 
-  <p>Meng Luo<sup>1</sup> · Zechen Bai<sup>1</sup> · Shanqing Xu<sup>2</sup> · Yanlin Li<sup>1</sup> · Kaixin Li<sup>1</sup> · Mengchen Qian<sup>2</sup> · Ziyang Luo<sup>3</sup> · Wei Chen<sup>2</sup> · Hongzhan Lin<sup>1</sup></p>
-  <p><sub><sup>1</sup> National University of Singapore &nbsp;·&nbsp; <sup>2</sup> Huazhong University of Science and Technology &nbsp;·&nbsp; <sup>3</sup> Hong Kong Baptist University</sub></p>
+  <p>Meng Luo<sup>1</sup> · Zechen Bai<sup>1</sup> · Shanqing Xu<sup>2</sup> · Yanlin Li<sup>1</sup> · Kaixin Li<sup>1</sup> · Mengchen Qian<sup>2</sup> · Ran Zhang<sup>3</sup> · Ziyang Luo<sup>4</sup> · Wei Chen<sup>2</sup> · Hongzhan Lin<sup>1*</sup></p>
+  <p><sub><sup>1</sup> National University of Singapore &nbsp;·&nbsp; <sup>2</sup> Huazhong University of Science and Technology &nbsp;·&nbsp; <sup>3</sup> NTU &nbsp;·&nbsp; <sup>4</sup> Hong Kong Baptist University</sub></p>
+  <p><sub>* Corresponding author</sub></p>
 </div>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/icons/about-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/readme/icons/about-light.svg"><img src="assets/readme/icons/about-light.svg" alt="" width="36" align="left"></picture>
@@ -130,10 +131,10 @@ The same physical experience can leave very different kinds of change behind, an
 
 ## Toward recursive self-improvement
 
-<p align="center"><img src="assets/readme/figures/figure-9.png" width="900" alt="Figure 9. A proposed test of the two links of recursive self-improvement (R1 and R2). In R2, self-revision with frozen or acquired knowledge first produces the control or next improver, respectively. Each then revises a learning procedure, tested through fresh matched learners under a common, protected outcome check."></p>
-<p align="center"><sub><b>Figure 9. A proposed test of the two links of recursive self-improvement (R1 and R2).</b> In R2, self-revision with frozen or acquired knowledge first produces the control or next improver, respectively. Each then revises a learning procedure, tested through fresh matched learners under a common, protected outcome check.</sub></p>
+<p align="center"><img src="assets/readme/figures/figure-9.png" width="900" alt="Figure 9. A proposed test of the two links of recursive self-improvement (R1 and R2). In R2, self-revision with frozen or acquired knowledge first produces the control or next improver, respectively. Each then revises a learning procedure, which is tested through fresh matched learners under a common, protected outcome check."></p>
+<p align="center"><sub><b>Figure 9. A proposed test of the two links of recursive self-improvement (R1 and R2).</b> In R2, self-revision with frozen or acquired knowledge first produces the control or next improver, respectively. Each then revises a learning procedure, which is tested through fresh matched learners under a common, protected outcome check.</sub></p>
 
-- **The first three claims already have support.** Existing studies show behavioral improvement, later-learning benefit, and procedure improvement; some systems also change their improver's knowledge or tools.
+- **The first three claims already have support.** Existing studies show behavioral improvement, later-learning benefit, and procedure improvement; some systems also change their improver's knowledge or tools. For R1 and R2, the survey distinguishes mechanism only, uncontrolled results, and controlled results; evidence for an earlier claim does not establish a later one.
 - **R1: repair knowledge must improve the improver.** Give the improver, with its earlier and with its acquired repair knowledge, the same new failure histories, tools, objectives, and budget; apply the learning procedures each produces to matched learners and compare common physical outcomes.
 - **R2: the improved improver must help improve itself.** Let the updated improver propose a revision of itself and compare it with a control revision proposed with its earlier knowledge frozen; repeating the first test on the resulting improvers links further gains to what was learned.
 - **Where to start.** Reward construction and skill-library editing yield inspectable revisions that simulation can screen, leaving four hardware-trained learners per seed. Eureka (a reward improver whose knowledge does not change) and PRACTICE (a learned skill editor whose own improver is fixed) already supply baselines.
@@ -161,7 +162,7 @@ Six directions, the condition each mainly serves, its central question, and a be
 2. Test versioned evaluators and repair knowledge on held-out failures and declared hardware or software changes, using protected outcome checks to separate transfer from drift.
 3. Connect these tests across at least two causally isolated procedure-revision rounds and report their full acquisition, maintenance, and revalidation costs.
 
-> *Physical recursive self-improvement will be demonstrated not when a robot changes many times, but when knowledge of why one repair worked causally improves how the next repair is made.*
+> *Physical recursive self-improvement will be demonstrated not when a robot changes many times, but when knowledge of why one repair worked causally improves how the next repair is made, and when that improved capability, applied to new evidence, helps improve itself again without losing the ability to keep learning.*
 
 <p align="right"><sub><a href="#repository-guide">↑ Back to guide</a></sub></p>
 
@@ -764,7 +765,7 @@ If you find the survey or the reference library useful, please cite:
 ```bibtex
 @misc{luo2026physicalrsi,
   title        = {Toward Recursive Self-Improvement in Physical AI: Foundations, Mechanisms, and Open Problems},
-  author       = {Luo, Meng and Bai, Zechen and Xu, Shanqing and Li, Yanlin and Li, Kaixin and Qian, Mengchen and Luo, Ziyang and Chen, Wei and Lin, Hongzhan},
+  author       = {Luo, Meng and Bai, Zechen and Xu, Shanqing and Li, Yanlin and Li, Kaixin and Qian, Mengchen and Zhang, Ran and Luo, Ziyang and Chen, Wei and Lin, Hongzhan},
   year         = {2026},
   howpublished = {\url{https://github.com/Physical2RSI/physical2rsi.github.io}},
   note         = {Manuscript}

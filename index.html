@@ -147,8 +147,9 @@
           <div class="hero-copy">
             <h1 id="project-title">Toward <span>Recursive Self&#8209;Improvement</span><br />in Physical AI</h1>
             <p class="hero-subtitle">Foundations, Mechanisms, and Open Problems</p>
-            <p class="hero-authors"><span>Meng Luo<sup>1</sup></span><span>Zechen Bai<sup>1</sup></span><span>Shanqing Xu<sup>2</sup></span><span>Yanlin Li<sup>1</sup></span><span>Kaixin Li<sup>1</sup></span><span>Mengchen Qian<sup>2</sup></span><span>Ziyang Luo<sup>3</sup></span><span>Wei Chen<sup>2</sup></span><span>Hongzhan Lin<sup>1</sup></span></p>
-            <p class="hero-affiliations"><span><sup>1</sup>National University of Singapore</span><span><sup>2</sup>Huazhong University of Science and Technology</span><span><sup>3</sup>Hong Kong Baptist University</span></p>
+            <p class="hero-authors"><span>Meng Luo<sup>1</sup></span><span>Zechen Bai<sup>1</sup></span><span>Shanqing Xu<sup>2</sup></span><span>Yanlin Li<sup>1</sup></span><span>Kaixin Li<sup>1</sup></span><span>Mengchen Qian<sup>2</sup></span><span>Ran Zhang<sup>3</sup></span><span>Ziyang Luo<sup>4</sup></span><span>Wei Chen<sup>2</sup></span><span>Hongzhan Lin<sup>1*</sup></span></p>
+            <p class="hero-affiliations"><span><sup>1</sup>National University of Singapore</span><span><sup>2</sup>Huazhong University of Science and Technology</span><span><sup>3</sup>NTU</span><span><sup>4</sup>Hong Kong Baptist University</span></p>
+            <p class="hero-correspondence">* Corresponding author</p>
             <div class="hero-actions">
               <a href="#survey" class="button button-gold">Read the survey<svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v10M3.5 8.5 8 13l4.5-4.5"/></svg></a>
               <a href="#references" class="button button-glass"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 3.5h4l1.5 1.5v8l-1.5-1H2.5zM13.5 3.5h-4L8 5v8l1.5-1h4z"/></svg>Reference library</a>
@@ -301,10 +302,10 @@
             </div>
             <figure class="survey-figure">
               <img src="assets/readme/figures/figure-9.png" width="1600" height="880" loading="lazy" decoding="async" alt="Figure 9. A proposed test of the two links of recursive self-improvement (R1 and R2)." />
-              <figcaption><strong>Figure 9. A proposed test of the two links of recursive self-improvement (R1 and R2).</strong> In R2, self-revision with frozen or acquired knowledge first produces the control or next improver, respectively. Each then revises a learning procedure, tested through fresh matched learners under a common, protected outcome check.</figcaption>
+              <figcaption><strong>Figure 9. A proposed test of the two links of recursive self-improvement (R1 and R2).</strong> In R2, self-revision with frozen or acquired knowledge first produces the control or next improver, respectively. Each then revises a learning procedure, which is tested through fresh matched learners under a common, protected outcome check.</figcaption>
             </figure>
             <ul class="recursion-list">
-              <li><span class="recursion-dot" aria-hidden="true"></span><div><strong>The first three claims already have support.</strong> Existing studies show behavioral improvement, later-learning benefit, and procedure improvement; some systems also change their improver&#39;s knowledge or tools.</div></li>
+              <li><span class="recursion-dot" aria-hidden="true"></span><div><strong>The first three claims already have support.</strong> Existing studies show behavioral improvement, later-learning benefit, and procedure improvement; some systems also change their improver&#39;s knowledge or tools. For R1 and R2, the survey distinguishes mechanism only, uncontrolled results, and controlled results; evidence for an earlier claim does not establish a later one.</div></li>
               <li><img class="recursion-art" src="assets/art/reviser.webp" width="475" height="480" loading="lazy" decoding="async" alt="" /><div><strong>R1: repair knowledge must improve the improver.</strong> Give the improver, with its earlier and with its acquired repair knowledge, the same new failure histories, tools, objectives, and budget; apply the learning procedures each produces to matched learners and compare common physical outcomes.</div></li>
               <li><img class="recursion-art" src="assets/art/selfrevise.webp" width="480" height="420" loading="lazy" decoding="async" alt="" /><div><strong>R2: the improved improver must help improve itself.</strong> Let the updated improver propose a revision of itself and compare it with a control revision proposed with its earlier knowledge frozen; repeating the first test on the resulting improvers links further gains to what was learned.</div></li>
               <li><span class="recursion-dot" aria-hidden="true"></span><div><strong>Where to start.</strong> Reward construction and skill-library editing yield inspectable revisions that simulation can screen, leaving four hardware-trained learners per seed. Eureka (a reward improver whose knowledge does not change) and PRACTICE (a learned skill editor whose own improver is fixed) already supply baselines.</div></li>
@@ -362,7 +363,7 @@
               <li>Test versioned evaluators and repair knowledge on held-out failures and declared hardware or software changes, using protected outcome checks to separate transfer from drift.</li>
               <li>Connect these tests across at least two causally isolated procedure-revision rounds and report their full acquisition, maintenance, and revalidation costs.</li>
             </ol>
-            <blockquote class="survey-closing">Physical recursive self-improvement will be demonstrated not when a robot changes many times, but when knowledge of why one repair worked causally improves how the next repair is made.</blockquote>
+            <blockquote class="survey-closing">Physical recursive self-improvement will be demonstrated not when a robot changes many times, but when knowledge of why one repair worked causally improves how the next repair is made, and when that improved capability, applied to new evidence, helps improve itself again without losing the ability to keep learning.</blockquote>
           </div>
           <div class="survey-block survey-cite" id="survey-citation" data-reveal data-chapter="Citation">
             <div class="block-head">
@@ -374,7 +375,7 @@
             </div>
             <pre id="survey-bibtex"><code>@misc{luo2026physicalrsi,
   title        = {Toward Recursive Self-Improvement in Physical AI: Foundations, Mechanisms, and Open Problems},
-  author       = {Luo, Meng and Bai, Zechen and Xu, Shanqing and Li, Yanlin and Li, Kaixin and Qian, Mengchen and Luo, Ziyang and Chen, Wei and Lin, Hongzhan},
+  author       = {Luo, Meng and Bai, Zechen and Xu, Shanqing and Li, Yanlin and Li, Kaixin and Qian, Mengchen and Zhang, Ran and Luo, Ziyang and Chen, Wei and Lin, Hongzhan},
   year         = {2026},
   howpublished = {\url{https://github.com/Physical2RSI/physical2rsi.github.io}},
   note         = {Manuscript}
