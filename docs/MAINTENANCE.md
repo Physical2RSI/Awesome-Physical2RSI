@@ -5,7 +5,7 @@ The **Physical AI & Recursive Self-Improvement** project contains a static websi
 ## Structure
 
 ```text
-.github/       Issue forms, pull request guidance, CI, and Pages deployment
+.github/       Issue forms, pull request guidance, and quality checks
 assets/        Public brand artwork, icons, fonts, and asset credits
 data/          Public reference metadata and its documentation
 docs/          Maintenance and release documentation
@@ -33,6 +33,8 @@ Bibliographic fields are deliberately limited. Records must not carry unpublishe
 The catalog tests cover combined filtering, URL state, page-size bounds, venue normalization, reference summaries, publication links, and citation formatting. The site's year, publication-type, and venue views are calculated from public metadata; they do not encode the unpublished survey's research taxonomy.
 
 `npm run build` runs the checks, then copies only the files selected in `tools/public-files.mjs` to a fresh `dist/` directory. It creates `.nojekyll` there. GitHub Pages uploads only that directory, never the repository root. The build does not read the original manuscript or a parent directory.
+
+This repository, `Awesome-Physical2RSI`, is the single source for project content, references, assets, and the website. The separate [website deployment repository](https://github.com/Physical2RSI/physical2rsi.github.io) builds this repository's `main` branch and publishes the organization root website. It checks for new commits every five minutes, subject to GitHub scheduling delays, and skips unchanged deployments. For an immediate release, run **Deploy GitHub Pages** in that deployment repository. See [DEPLOYMENT.md](DEPLOYMENT.md).
 
 Keep source manuscripts and review files outside this repository. `.gitignore` helps avoid accidental staging, but it is not an authorization mechanism: inspect every proposed commit and keep the existing public-file checks enabled.
 

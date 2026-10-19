@@ -2,6 +2,8 @@
 
 Contributions to **Physical2RSI** (*Toward Recursive Self-Improvement in Physical AI*) currently cover public reference metadata, accessibility, and the project website. Please use an issue to report a citation correction or website problem, or submit a focused pull request.
 
+Make content and website changes in this `Awesome-Physical2RSI` repository. The separate [website deployment repository](https://github.com/Physical2RSI/physical2rsi.github.io) publishes this repository's `main` branch; see [deployment instructions](docs/DEPLOYMENT.md) for automatic synchronization and immediate releases.
+
 ## Public scope
 
 This project is in its prepublication stage. The README and the website carry a summary of the survey that the authors approved and maintain. Public contributions are limited to bibliography metadata and website infrastructure. Do not attach, paste, or commit unpublished manuscript text, abstracts, taxonomies, analysis, figures, tables, PDFs, Overleaf projects, or source archives. The full survey content will be added after publication.

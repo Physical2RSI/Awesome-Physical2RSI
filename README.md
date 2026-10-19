@@ -53,6 +53,8 @@ The survey positions RSI within robot learning and synthesizes pathways from imp
 
 ## Repository guide
 
+Project source and contributions: [Awesome-Physical2RSI](https://github.com/Physical2RSI/Awesome-Physical2RSI). Website deployment: [physical2rsi.github.io](https://github.com/Physical2RSI/physical2rsi.github.io).
+
 [About the survey](#about-the-survey) · [Research questions](#research-questions) · [The review at a glance](#the-review-at-a-glance) · [Four uses of retained change](#four-uses-of-retained-change) · [Toward recursive self-improvement](#toward-recursive-self-improvement) · [Open problems](#open-problems) · [References](#references) · [Contributing](#contributing) · [Contributors](#contributors) · [Star history](#star-history) · [Citation](#citation) · [Repository layout](#repository-layout) · [License](#license)
 
 ## Choose a section
@@ -726,7 +728,7 @@ Six directions, the condition each mainly serves, its central question, and a be
 
 ## Contributing
 
-Found incorrect metadata or a broken link? [Open an issue](https://github.com/Physical2RSI/physical2rsi.github.io/issues/new/choose) or follow [CONTRIBUTING.md](CONTRIBUTING.md). Contributions currently cover public reference metadata and the project website.
+Found incorrect metadata or a broken link? [Open an issue](https://github.com/Physical2RSI/Awesome-Physical2RSI/issues/new/choose) or follow [CONTRIBUTING.md](CONTRIBUTING.md). Contributions currently cover public reference metadata and the project website.
 
 <p align="right"><sub><a href="#repository-guide">↑ Back to guide</a></sub></p>
 
@@ -736,7 +738,7 @@ Found incorrect metadata or a broken link? [Open an issue](https://github.com/Ph
 
 Thanks to everyone who has corrected references and improved the project.
 
-<a href="https://github.com/Physical2RSI/physical2rsi.github.io/graphs/contributors"><img src="https://contrib.rocks/image?repo=Physical2RSI/physical2rsi.github.io" alt="Contributors to Physical2RSI/physical2rsi.github.io"></a>
+<a href="https://github.com/Physical2RSI/Awesome-Physical2RSI/graphs/contributors"><img src="https://contrib.rocks/image?repo=Physical2RSI/Awesome-Physical2RSI" alt="Contributors to Physical2RSI/Awesome-Physical2RSI"></a>
 
 <p align="right"><sub><a href="#repository-guide">↑ Back to guide</a></sub></p>
 
@@ -745,11 +747,11 @@ Thanks to everyone who has corrected references and improved the project.
 ## Star history
 
 <p align="center">
-  <a href="https://star-history.com/#Physical2RSI/physical2rsi.github.io&Date">
+  <a href="https://star-history.com/#Physical2RSI/Awesome-Physical2RSI&Date">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Physical2RSI/physical2rsi.github.io&type=Date&theme=dark">
-      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Physical2RSI/physical2rsi.github.io&type=Date">
-      <img alt="Star history of Physical2RSI/physical2rsi.github.io" src="https://api.star-history.com/svg?repos=Physical2RSI/physical2rsi.github.io&type=Date" width="800">
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Physical2RSI/Awesome-Physical2RSI&type=Date&theme=dark">
+      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Physical2RSI/Awesome-Physical2RSI&type=Date">
+      <img alt="Star history of Physical2RSI/Awesome-Physical2RSI" src="https://api.star-history.com/svg?repos=Physical2RSI/Awesome-Physical2RSI&type=Date" width="800">
     </picture>
   </a>
 </p>
@@ -767,7 +769,7 @@ If you find the survey or the reference library useful, please cite:
   title        = {Toward Recursive Self-Improvement in Physical AI: Foundations, Mechanisms, and Open Problems},
   author       = {Luo, Meng and Bai, Zechen and Xu, Shanqing and Li, Yanlin and Li, Kaixin and Qian, Mengchen and Zhang, Ran and Luo, Ziyang and Chen, Wei and Lin, Hongzhan},
   year         = {2026},
-  howpublished = {\url{https://github.com/Physical2RSI/physical2rsi.github.io}},
+  howpublished = {\url{https://github.com/Physical2RSI/Awesome-Physical2RSI}},
   note         = {Manuscript}
 }
 ```

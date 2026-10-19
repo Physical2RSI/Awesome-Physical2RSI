@@ -201,6 +201,8 @@ export function renderReadme(references) {
   ];
   heading("Repository guide");
   add(
+    `Project source and contributions: [Awesome-Physical2RSI](${REPO_URL}). Website deployment: [physical2rsi.github.io](https://github.com/Physical2RSI/physical2rsi.github.io).`,
+    "",
     sections.map((title) => `[${title}](#${anchor(title)})`).join(" · "),
     "",
     "## Choose a section",
