@@ -14,11 +14,12 @@ export const SURVEY = {
     ["Kaixin Li", [1]],
     ["Mengchen Qian", [2]],
     ["Ran Zhang", [3]],
-    ["Ziyang Luo", [4]],
+    ["Yingtian Zou", [4]],
+    ["Ziyang Luo", [5]],
     ["Wei Chen", [2]],
     ["Hongzhan Lin", [1], true],
   ],
-  affiliations: ["NUS", "HUST", "NTU", "HKBU"],
+  affiliations: ["NUS", "HUST", "NTU", "SJTU", "HKBU"],
   bibtexKey: "luo2026physicalrsi",
 };
 

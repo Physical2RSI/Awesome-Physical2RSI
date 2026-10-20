@@ -6,7 +6,7 @@ The manuscript is not yet public. With the authors' approval, the README and the
 
 Until the paper is public, the site carries no scholarly metadata (`citation_*` meta tags or `ScholarlyArticle` structured data), and the checks continue to enforce this. No manuscript PDF, source, or other figure is published.
 
-The latest synchronization was checked against the author-supplied manuscript dated 18 October 2026. The shared content records ten authors across four affiliations, including the corresponding-author mark, and the citation uses that author order. The four conditions, research questions, five-section outline, six open problems, and all nine figure assets were checked against the manuscript. Existing figure assets match the current diagrams and are retained. All 343 bibliography records match the supplied bibliography, with the previously verified PISA publication link preserved where the source omits it.
+The latest full synchronization was checked against the author-supplied manuscript dated 18 October 2026. The author list was updated on 20 October 2026 to add Yingtian Zou (SJTU) immediately after Ran Zhang. The shared content records eleven authors across five affiliations, including the corresponding-author mark, and the citation uses that author order. The four conditions, research questions, five-section outline, six open problems, and all nine figure assets were checked against the manuscript. Existing figure assets match the current diagrams and are retained. All 343 bibliography records match the supplied bibliography, with the previously verified PISA publication link preserved where the source omits it.
 
 ## When the paper is public
 
