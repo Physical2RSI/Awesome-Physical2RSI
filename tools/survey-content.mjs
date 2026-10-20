@@ -13,6 +13,7 @@ export const SURVEY = {
     ["Yanlin Li", [1]],
     ["Kaixin Li", [1]],
     ["Mengchen Qian", [2]],
+    ["Weifeng Lu", [4]],
     ["Ran Zhang", [3]],
     ["Yingtian Zou", [4]],
     ["Ziyang Luo", [5]],
