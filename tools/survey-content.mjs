@@ -3,7 +3,6 @@
 
 export const SURVEY = {
   title: "Toward Recursive Self-Improvement in Physical AI",
-  subtitle: "Foundations, Mechanisms, and Open Problems",
   year: 2026,
   // [name, affiliation numbers, corresponding author (optional)]
   authors: [
@@ -13,14 +12,14 @@ export const SURVEY = {
     ["Yanlin Li", [1]],
     ["Kaixin Li", [1]],
     ["Mengchen Qian", [2]],
-    ["Weifeng Lu", [4]],
-    ["Ran Zhang", [3]],
-    ["Yingtian Zou", [4]],
+    ["Weifeng Lu", [3]],
+    ["Ran Zhang", [4]],
+    ["Yingtian Zou", [3]],
     ["Ziyang Luo", [5]],
     ["Wei Chen", [2]],
     ["Hongzhan Lin", [1], true],
   ],
-  affiliations: ["NUS", "HUST", "NTU", "SJTU", "HKBU"],
+  affiliations: ["NUS", "HUST", "SJTU", "NTU", "HKBU"],
   bibtexKey: "luo2026physicalrsi",
 };
 
@@ -29,7 +28,7 @@ export const ABOUT = [
     "Recent digital agents test this idea by rewriting their own code and checking each version with executable tests. Bringing these mechanisms " +
     "into the physical world requires learning from partial observations through costly trials, while accounting for changing operating conditions " +
     "and potentially irreversible consequences.",
-  "The survey positions RSI within robot learning and synthesizes pathways from improving robot capabilities to improving the processes that " +
+  "The survey positions RSI within robot learning and traces pathways from improving robot capabilities to improving the processes that " +
     "generate them. It examines how physical experience can strengthen these improvement mechanisms, and when the resulting gains can support " +
     "further self-improvement of the mechanisms themselves.",
 ];
@@ -41,7 +40,7 @@ export const CONDITIONS = [
   ["Continued practice", "does another informative trial remain safe and affordable?"],
 ];
 export const CONDITIONS_NOTE =
-  "Component-level proxies are not downstream value: collection success says little about training value when kept trajectories omit the action a learner lacks, and prediction or evaluator accuracy says little when the optimizer or controller cannot use the distinction.";
+  "Data volume and component accuracy are unreliable proxies for progress: two data collectors with similar task success can yield training data of very different value, and a more accurate predictor can still produce less useful training data for a policy.";
 
 export const FIGURES = {
   1: ["From digital to physical recursive self-improvement.", "Numbers mark where experience leaves a change: policy (1), world model (2), and external knowledge (3) improve what the robot does; the learning procedure (4) changes how it learns; and the improver, drawn as the loop around the procedure, revises it. RSI further requires that repair knowledge improve the improver and that the improver, once improved, help produce its own next improvement."],
@@ -64,7 +63,7 @@ export const QUESTIONS = [
   ["RQ4", "What makes self-improvement different in the physical world?", "How do sensing, embodiment, reset, safety, cost, and hardware changes constrain the process?"],
 ];
 
-// The manuscript's table of the four uses of retained change, with the section that discusses each use
+// The four rows of Figure 4 (where a retained change is kept and how it is used), with the section that discusses each use
 export const USES = [
   ["Behavior", "Policy, value, residual", "Execute or choose actions", "Better task behavior", "§3.1.1 Policy updates"],
   ["Prediction and practice", "Dynamics or world model", "Plan or supply training experience", "Better decisions or learning", "§3.1.2 World models"],
@@ -73,8 +72,9 @@ export const USES = [
 ];
 
 export const EVIDENCE =
-  "Existing studies, concentrated in manipulation, support behavioral improvement, benefits to later learning, and procedure improvement. " +
-  "Some systems also change the improver's knowledge or tools, but the physical studies reviewed here have yet to isolate gains attributable to recursion.";
+  "Existing studies, concentrated in manipulation, support behavioral improvement, later-learning benefits, and procedure improvement. " +
+  "Some systems also change their improver's knowledge or tools, but no physical study reviewed here has yet isolated a gain attributable to recursion, "+
+  "which requires a controlled comparison against a version of the improver whose acquired knowledge is frozen.";
 
 export const OUTLINE = [
   ["1", "Introduction", ""],
@@ -82,24 +82,24 @@ export const OUTLINE = [
   ["3", "Mechanisms toward Physical RSI", "Improving policies, world models, and knowledge · Improving learning procedures · Improving the improver · Closing the recursive loop"],
   ["4", "Challenges and Future Directions for Physical RSI", "Measuring improvement · Accumulating improvement · Keeping improvement safe · Making improvement recursive"],
   ["5", "Conclusion", ""],
-  ["A–C", "Appendices", "Extended landscape of physical self-improvement · Reported outcomes and experimental context · Glossary"],
+  ["A–D", "Appendices", "Extended landscape of physical self-improvement · Reported outcomes and experimental context · Glossary · Gallery"],
 ];
 
 export const RECURSION = [
   ["The first three claims already have support.", "Existing studies show behavioral improvement, later-learning benefit, and procedure improvement; some systems also change their improver's knowledge or tools. For R1 and R2, the survey distinguishes mechanism only, uncontrolled results, and controlled results; evidence for an earlier claim does not establish a later one."],
   ["R1: repair knowledge must improve the improver.", "Give the improver, with its earlier and with its acquired repair knowledge, the same new failure histories, tools, objectives, and budget; apply the learning procedures each produces to matched learners and compare common physical outcomes."],
-  ["R2: the improved improver must help improve itself.", "Let the updated improver propose a revision of itself and compare it with a control revision proposed with its earlier knowledge frozen; repeating the first test on the resulting improvers links further gains to what was learned."],
-  ["Where to start.", "Reward construction and skill-library editing yield inspectable revisions that simulation can screen, leaving four hardware-trained learners per seed. Eureka (a reward improver whose knowledge does not change) and PRACTICE (a learned skill editor whose own improver is fixed) already supply baselines."],
+  ["R2: the improved improver must help improve itself.", "Given common new repair histories, let the updated improver propose a revision of itself and compare the result both with the unrevised improver and with a control revision of the same improver proposed with its earlier knowledge frozen; repeating the first two tests on the resulting improvers links further gains to what was learned."],
+  ["Where to start.", "Reward construction and skill-library editing yield inspectable revisions that simulation can screen, leaving four hardware-trained learners per seed when one candidate per improver survives. Eureka (a reward improver whose knowledge does not change) and PRACTICE (a learned skill editor whose own improver is fixed) already supply baselines."],
 ];
 
 // The manuscript's table of open problems: [direction, conditions served, central question, starting benchmark]
 export const PROBLEMS = [
-  ["Keeping judges aligned", ["Robustness to distribution shift"], "How can evaluators be refreshed without changing the intended task?", "Fixed learner and data; varied evaluator and refresh rule; protected physical outcomes"],
-  ["Surviving system changes", ["Usability", "Robustness to distribution shift"], "When should an artifact be reused, adapted, revalidated, or retired?", "Declared changes to sensing, embodiment, timing, interfaces, and memory schemas, plus gradual drift"],
-  ["Budgeting physical resources", ["Continued practice"], "How should robot time, human attention, compute, and wear be spent over time?", "Task sequences with maintenance events under finite capacities; Pareto reporting of resources"],
-  ["Finding the bottleneck", ["Informative feedback"], "Which component limits the next improvement?", "Injected policy, model, evaluator, and interface faults with similar terminal outcomes; held-out natural failures"],
-  ["Choosing the next experiment", ["Informative feedback"], "Which probe yields evidence that an available update can use?", "Fixed starting system and budget; joint selection versus fixed, information-gain-only, and sequential baselines"],
-  ["Transferring repair knowledge", ["Usability", "Robustness to distribution shift"], "Does knowledge about earlier repairs improve repairs on new failure families?", "The two-round comparison of Figure 9 on held-out failure families"],
+  ["Keeping judges aligned", ["Robustness to distribution shift"], "Refresh the judge, keep the task", "Vary only the evaluator; protected outcomes"],
+  ["Surviving system changes", ["Usability", "Robustness to distribution shift"], "Reuse, adapt, revalidate, or retire?", "Declared changes plus gradual drift"],
+  ["Budgeting physical resources", ["Continued practice"], "Spending robot time, attention, compute, wear", "Task sequences with upkeep; Pareto reports"],
+  ["Finding the bottleneck", ["Informative feedback"], "Which component limits improvement?", "Injected faults; held-out natural failures"],
+  ["Choosing the next experiment", ["Informative feedback"], "Which probe yields usable evidence?", "Joint vs fixed, information-gain, sequential"],
+  ["Transferring repair knowledge", ["Usability", "Robustness to distribution shift"], "Do repair lessons transfer to new failures?", "Two-round test (Figure 9)"],
 ];
 
 export const PROGRAMS = [
@@ -121,7 +121,7 @@ export function surveyBibtex(url) {
     .join(" and ");
   return [
     `@misc{${SURVEY.bibtexKey},`,
-    `  title        = {${SURVEY.title}: ${SURVEY.subtitle}},`,
+    `  title        = {${SURVEY.title}},`,
     `  author       = {${authors}},`,
     `  year         = {${SURVEY.year}},`,
     `  howpublished = {\\url{${url}}},`,

@@ -49,7 +49,6 @@ body { width: ${width}px; height: ${height}px; overflow: hidden; font-family: Ma
 .brand span { background: linear-gradient(170deg, #f2b33a 10%, #d8641c 90%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; }
 h1 { margin: 0; font-size: ${titleSize}px; line-height: 1.12; font-weight: 700; letter-spacing: -0.01em; }
 h1 em { font-style: normal; color: #125b50; }
-.subtitle { margin: ${Math.round(titleSize * 0.42)}px 0 ${Math.round(titleSize * 0.5)}px; font-size: ${Math.round(titleSize * 0.4)}px; line-height: 1.45; color: #566760; }
 .rule { width: 300px; height: 1px; background: #dce4df; margin-bottom: ${Math.round(titleSize * 0.42)}px; }
 .status { display: flex; align-items: center; gap: 14px; font-size: ${Math.round(titleSize * 0.35)}px; color: #566760; }
 .status strong { color: #125b50; font-weight: 700; }
@@ -59,7 +58,6 @@ h1 em { font-style: normal; color: #125b50; }
 <div class="copy">
   <div class="brand"><img src="${asset("assets/mark.png")}" alt=""><div>Physical<span>2</span>RSI</div></div>
   <h1>${SURVEY.title.replace("Recursive Self-Improvement", "<em>Recursive<br>Self&#8209;Improvement</em><br>")}</h1>
-  <p class="subtitle">${SURVEY.subtitle}</p>
 </div>
 <img class="teaser" src="${asset("assets/teaser.webp")}" alt="">
 </body></html>`;

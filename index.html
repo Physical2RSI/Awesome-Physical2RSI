@@ -146,9 +146,8 @@
         <div class="hero-inner">
           <div class="hero-copy">
             <h1 id="project-title">Toward <span>Recursive Self&#8209;Improvement</span><br />in Physical AI</h1>
-            <p class="hero-subtitle">Foundations, Mechanisms, and Open Problems</p>
-            <p class="hero-authors"><span>Meng Luo<sup>1</sup></span><span>Zechen Bai<sup>1</sup></span><span>Shanqing Xu<sup>2</sup></span><span>Yanlin Li<sup>1</sup></span><span>Kaixin Li<sup>1</sup></span><span>Mengchen Qian<sup>2</sup></span><span>Weifeng Lu<sup>4</sup></span><span>Ran Zhang<sup>3</sup></span><span>Yingtian Zou<sup>4</sup></span><span>Ziyang Luo<sup>5</sup></span><span>Wei Chen<sup>2</sup></span><span>Hongzhan Lin<sup>1*</sup></span></p>
-            <p class="hero-affiliations"><span><sup>1</sup>NUS</span><span><sup>2</sup>HUST</span><span><sup>3</sup>NTU</span><span><sup>4</sup>SJTU</span><span><sup>5</sup>HKBU</span></p>
+            <p class="hero-authors"><span>Meng Luo<sup>1</sup></span><span>Zechen Bai<sup>1</sup></span><span>Shanqing Xu<sup>2</sup></span><span>Yanlin Li<sup>1</sup></span><span>Kaixin Li<sup>1</sup></span><span>Mengchen Qian<sup>2</sup></span><span>Weifeng Lu<sup>3</sup></span><span>Ran Zhang<sup>4</sup></span><span>Yingtian Zou<sup>3</sup></span><span>Ziyang Luo<sup>5</sup></span><span>Wei Chen<sup>2</sup></span><span>Hongzhan Lin<sup>1*</sup></span></p>
+            <p class="hero-affiliations"><span><sup>1</sup>NUS</span><span><sup>2</sup>HUST</span><span><sup>3</sup>SJTU</span><span><sup>4</sup>NTU</span><span><sup>5</sup>HKBU</span></p>
             <p class="hero-correspondence">* Corresponding author</p>
             <div class="hero-actions">
               <a href="#survey" class="button button-gold">Read the survey<svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v10M3.5 8.5 8 13l4.5-4.5"/></svg></a>
@@ -179,7 +178,7 @@
             <div class="survey-intro">
               <div class="survey-abstract">
                 <p><em>Recursive self-improvement</em> (RSI) describes a system that improves not only its behavior but also the process by which it improves. Recent digital agents test this idea by rewriting their own code and checking each version with executable tests. Bringing these mechanisms into the physical world requires learning from partial observations through costly trials, while accounting for changing operating conditions and potentially irreversible consequences.</p>
-                <p>The survey positions RSI within robot learning and synthesizes pathways from improving robot capabilities to improving the processes that generate them. It examines how physical experience can strengthen these improvement mechanisms, and when the resulting gains can support further self-improvement of the mechanisms themselves.</p>
+                <p>The survey positions RSI within robot learning and traces pathways from improving robot capabilities to improving the processes that generate them. It examines how physical experience can strengthen these improvement mechanisms, and when the resulting gains can support further self-improvement of the mechanisms themselves.</p>
               </div>
               <aside class="condition-panel" aria-labelledby="survey-conditions-title">
                 <h3 id="survey-conditions-title">Four recurring conditions</h3>
@@ -189,7 +188,7 @@
                   <li><img class="condition-art" src="assets/art/shift.webp" width="454" height="480" loading="lazy" decoding="async" alt="" /><div><strong>Robustness to distribution shift</strong><span>Does the change stay useful as the policy, model, task, or hardware changes, including changes caused by improvement itself?</span></div></li>
                   <li><img class="condition-art" src="assets/art/continuation.webp" width="331" height="480" loading="lazy" decoding="async" alt="" /><div><strong>Continued practice</strong><span>Does another informative trial remain safe and affordable?</span></div></li>
                 </ol>
-                <p>Component-level proxies are not downstream value: collection success says little about training value when kept trajectories omit the action a learner lacks, and prediction or evaluator accuracy says little when the optimizer or controller cannot use the distinction.</p>
+                <p>Data volume and component accuracy are unreliable proxies for progress: two data collectors with similar task success can yield training data of very different value, and a more accurate predictor can still produce less useful training data for a policy.</p>
               </aside>
             </div>
             <figure class="survey-figure">
@@ -228,7 +227,7 @@
               <img src="assets/readme/figures/figure-3.png" width="1600" height="883" loading="lazy" decoding="async" alt="Figure 3. The review at a glance." />
               <figcaption><strong>Figure 3. The review at a glance.</strong> Illustrations in (b) show the four grasp breakdowns from Section 1.</figcaption>
             </figure>
-            <p class="evidence-note"><strong>What current evidence shows.</strong> Existing studies, concentrated in manipulation, support behavioral improvement, benefits to later learning, and procedure improvement. Some systems also change the improver&#39;s knowledge or tools, but the physical studies reviewed here have yet to isolate gains attributable to recursion.</p>
+            <p class="evidence-note"><strong>What current evidence shows.</strong> Existing studies, concentrated in manipulation, support behavioral improvement, later-learning benefits, and procedure improvement. Some systems also change their improver&#39;s knowledge or tools, but no physical study reviewed here has yet isolated a gain attributable to recursion, which requires a controlled comparison against a version of the improver whose acquired knowledge is frozen.</p>
             <figure class="survey-figure">
               <img src="assets/readme/figures/figure-8.png" width="1600" height="570" loading="lazy" decoding="async" alt="Figure 8. Does a revised component help the next learner?" />
               <figcaption><strong>Figure 8. Does a revised component help the next learner?</strong> Two matched learners differ only in the component under test, here an evaluator. Their common outcome check stays fixed and separate from that evaluator; comparing the learners&#39; outcomes tests procedure improvement.</figcaption>
@@ -307,8 +306,8 @@
             <ul class="recursion-list">
               <li><span class="recursion-dot" aria-hidden="true"></span><div><strong>The first three claims already have support.</strong> Existing studies show behavioral improvement, later-learning benefit, and procedure improvement; some systems also change their improver&#39;s knowledge or tools. For R1 and R2, the survey distinguishes mechanism only, uncontrolled results, and controlled results; evidence for an earlier claim does not establish a later one.</div></li>
               <li><img class="recursion-art" src="assets/art/reviser.webp" width="475" height="480" loading="lazy" decoding="async" alt="" /><div><strong>R1: repair knowledge must improve the improver.</strong> Give the improver, with its earlier and with its acquired repair knowledge, the same new failure histories, tools, objectives, and budget; apply the learning procedures each produces to matched learners and compare common physical outcomes.</div></li>
-              <li><img class="recursion-art" src="assets/art/selfrevise.webp" width="480" height="420" loading="lazy" decoding="async" alt="" /><div><strong>R2: the improved improver must help improve itself.</strong> Let the updated improver propose a revision of itself and compare it with a control revision proposed with its earlier knowledge frozen; repeating the first test on the resulting improvers links further gains to what was learned.</div></li>
-              <li><span class="recursion-dot" aria-hidden="true"></span><div><strong>Where to start.</strong> Reward construction and skill-library editing yield inspectable revisions that simulation can screen, leaving four hardware-trained learners per seed. Eureka (a reward improver whose knowledge does not change) and PRACTICE (a learned skill editor whose own improver is fixed) already supply baselines.</div></li>
+              <li><img class="recursion-art" src="assets/art/selfrevise.webp" width="480" height="420" loading="lazy" decoding="async" alt="" /><div><strong>R2: the improved improver must help improve itself.</strong> Given common new repair histories, let the updated improver propose a revision of itself and compare the result both with the unrevised improver and with a control revision of the same improver proposed with its earlier knowledge frozen; repeating the first two tests on the resulting improvers links further gains to what was learned.</div></li>
+              <li><span class="recursion-dot" aria-hidden="true"></span><div><strong>Where to start.</strong> Reward construction and skill-library editing yield inspectable revisions that simulation can screen, leaving four hardware-trained learners per seed when one candidate per improver survives. Eureka (a reward improver whose knowledge does not change) and PRACTICE (a learned skill editor whose own improver is fixed) already supply baselines.</div></li>
             </ul>
           </div>
           <div class="survey-block" id="survey-problems" data-reveal data-chapter="Open problems">
@@ -323,38 +322,38 @@
               <article class="problem-card">
                 <h4>Keeping judges aligned</h4>
                 <p class="problem-tags"><span>Robustness to distribution shift</span></p>
-                <p class="problem-question">How can evaluators be refreshed without changing the intended task?</p>
-                <p class="problem-benchmark"><span>Starting benchmark</span>Fixed learner and data; varied evaluator and refresh rule; protected physical outcomes</p>
+                <p class="problem-question">Refresh the judge, keep the task</p>
+                <p class="problem-benchmark"><span>Starting benchmark</span>Vary only the evaluator; protected outcomes</p>
               </article>
               <article class="problem-card">
                 <h4>Surviving system changes</h4>
                 <p class="problem-tags"><span>Usability</span><span>Robustness to distribution shift</span></p>
-                <p class="problem-question">When should an artifact be reused, adapted, revalidated, or retired?</p>
-                <p class="problem-benchmark"><span>Starting benchmark</span>Declared changes to sensing, embodiment, timing, interfaces, and memory schemas, plus gradual drift</p>
+                <p class="problem-question">Reuse, adapt, revalidate, or retire?</p>
+                <p class="problem-benchmark"><span>Starting benchmark</span>Declared changes plus gradual drift</p>
               </article>
               <article class="problem-card">
                 <h4>Budgeting physical resources</h4>
                 <p class="problem-tags"><span>Continued practice</span></p>
-                <p class="problem-question">How should robot time, human attention, compute, and wear be spent over time?</p>
-                <p class="problem-benchmark"><span>Starting benchmark</span>Task sequences with maintenance events under finite capacities; Pareto reporting of resources</p>
+                <p class="problem-question">Spending robot time, attention, compute, wear</p>
+                <p class="problem-benchmark"><span>Starting benchmark</span>Task sequences with upkeep; Pareto reports</p>
               </article>
               <article class="problem-card">
                 <h4>Finding the bottleneck</h4>
                 <p class="problem-tags"><span>Informative feedback</span></p>
-                <p class="problem-question">Which component limits the next improvement?</p>
-                <p class="problem-benchmark"><span>Starting benchmark</span>Injected policy, model, evaluator, and interface faults with similar terminal outcomes; held-out natural failures</p>
+                <p class="problem-question">Which component limits improvement?</p>
+                <p class="problem-benchmark"><span>Starting benchmark</span>Injected faults; held-out natural failures</p>
               </article>
               <article class="problem-card">
                 <h4>Choosing the next experiment</h4>
                 <p class="problem-tags"><span>Informative feedback</span></p>
-                <p class="problem-question">Which probe yields evidence that an available update can use?</p>
-                <p class="problem-benchmark"><span>Starting benchmark</span>Fixed starting system and budget; joint selection versus fixed, information-gain-only, and sequential baselines</p>
+                <p class="problem-question">Which probe yields usable evidence?</p>
+                <p class="problem-benchmark"><span>Starting benchmark</span>Joint vs fixed, information-gain, sequential</p>
               </article>
               <article class="problem-card">
                 <h4>Transferring repair knowledge</h4>
                 <p class="problem-tags"><span>Usability</span><span>Robustness to distribution shift</span></p>
-                <p class="problem-question">Does knowledge about earlier repairs improve repairs on new failure families?</p>
-                <p class="problem-benchmark"><span>Starting benchmark</span>The two-round comparison of Figure 9 on held-out failure families</p>
+                <p class="problem-question">Do repair lessons transfer to new failures?</p>
+                <p class="problem-benchmark"><span>Starting benchmark</span>Two-round test (Figure 9)</p>
               </article>
             </div>
             <h4 class="program-title">Three near-term programs</h4>
@@ -374,7 +373,7 @@
               <img class="block-art" src="assets/art/act.webp" width="480" height="432" loading="lazy" decoding="async" alt="" />
             </div>
             <pre id="survey-bibtex"><code>@misc{luo2026physicalrsi,
-  title        = {Toward Recursive Self-Improvement in Physical AI: Foundations, Mechanisms, and Open Problems},
+  title        = {Toward Recursive Self-Improvement in Physical AI},
   author       = {Luo, Meng and Bai, Zechen and Xu, Shanqing and Li, Yanlin and Li, Kaixin and Qian, Mengchen and Lu, Weifeng and Zhang, Ran and Zou, Yingtian and Luo, Ziyang and Chen, Wei and Lin, Hongzhan},
   year         = {2026},
   howpublished = {\url{https://github.com/Physical2RSI/Awesome-Physical2RSI}},

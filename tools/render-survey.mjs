@@ -89,7 +89,6 @@ export function renderHero() {
     '  <div class="hero-inner">',
     '    <div class="hero-copy">',
     `      <h1 id="project-title">Toward <span>Recursive Self&#8209;Improvement</span><br />in Physical AI</h1>`,
-    `      <p class="hero-subtitle">${html(SURVEY.subtitle)}</p>`,
     `      <p class="hero-authors">${authors}</p>`,
     `      <p class="hero-affiliations">${affiliations}</p>`,
     ...(SURVEY.authors.some(([, , corresponding]) => corresponding)
