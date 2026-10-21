@@ -186,14 +186,14 @@
                 <ol class="condition-list">
                   <li><img class="condition-art" src="assets/art/signal.webp" width="474" height="480" loading="lazy" decoding="async" alt="" /><div><strong>Informative feedback</strong><span>Does experience distinguish the remaining learning need?</span></div></li>
                   <li><img class="condition-art" src="assets/art/recipient.webp" width="480" height="413" loading="lazy" decoding="async" alt="" /><div><strong>Usability</strong><span>Can the receiving component represent, optimize, and execute the change?</span></div></li>
-                  <li><img class="condition-art" src="assets/art/shift.webp" width="454" height="480" loading="lazy" decoding="async" alt="" /><div><strong>Distribution shift</strong><span>Does the change stay useful as the policy, model, task, or hardware changes, including changes caused by improvement itself?</span></div></li>
+                  <li><img class="condition-art" src="assets/art/shift.webp" width="454" height="480" loading="lazy" decoding="async" alt="" /><div><strong>Robustness to distribution shift</strong><span>Does the change stay useful as the policy, model, task, or hardware changes, including changes caused by improvement itself?</span></div></li>
                   <li><img class="condition-art" src="assets/art/continuation.webp" width="331" height="480" loading="lazy" decoding="async" alt="" /><div><strong>Continued practice</strong><span>Does another informative trial remain safe and affordable?</span></div></li>
                 </ol>
                 <p>Component-level proxies are not downstream value: collection success says little about training value when kept trajectories omit the action a learner lacks, and prediction or evaluator accuracy says little when the optimizer or controller cannot use the distinction.</p>
               </aside>
             </div>
             <figure class="survey-figure">
-              <img src="assets/readme/figures/figure-1.webp" width="1600" height="899" loading="lazy" decoding="async" alt="Figure 1. From digital to physical recursive self-improvement." />
+              <img src="assets/readme/figures/figure-1.webp" width="1600" height="896" loading="lazy" decoding="async" alt="Figure 1. From digital to physical recursive self-improvement." />
               <figcaption><strong>Figure 1. From digital to physical recursive self-improvement.</strong> Numbers mark where experience leaves a change: policy (1), world model (2), and external knowledge (3) improve what the robot does; the learning procedure (4) changes how it learns; and the improver, drawn as the loop around the procedure, revises it. RSI further requires that repair knowledge improve the improver and that the improver, once improved, help produce its own next improvement.</figcaption>
             </figure>
             <figure class="survey-figure">
@@ -230,7 +230,7 @@
             </figure>
             <p class="evidence-note"><strong>What current evidence shows.</strong> Existing studies, concentrated in manipulation, support behavioral improvement, benefits to later learning, and procedure improvement. Some systems also change the improver&#39;s knowledge or tools, but the physical studies reviewed here have yet to isolate gains attributable to recursion.</p>
             <figure class="survey-figure">
-              <img src="assets/readme/figures/figure-8.png" width="1600" height="571" loading="lazy" decoding="async" alt="Figure 8. Does a revised component help the next learner?" />
+              <img src="assets/readme/figures/figure-8.png" width="1600" height="570" loading="lazy" decoding="async" alt="Figure 8. Does a revised component help the next learner?" />
               <figcaption><strong>Figure 8. Does a revised component help the next learner?</strong> Two matched learners differ only in the component under test, here an evaluator. Their common outcome check stays fixed and separate from that evaluator; comparing the learners&#39; outcomes tests procedure improvement.</figcaption>
             </figure>
           </div>
@@ -269,8 +269,8 @@
               </article>
             </div>
             <figure class="survey-figure">
-              <img src="assets/readme/figures/figure-4.png" width="1600" height="1264" loading="lazy" decoding="async" alt="Figure 4. Where a retained change is kept, and its use." />
-              <figcaption><strong>Figure 4. Where a retained change is kept, and its use.</strong> Each row follows the grasp example from physical experience to the retained change and its immediate use; the italic line names the use. Dashed tags mark secondary handoffs into the learning procedure.</figcaption>
+              <img src="assets/readme/figures/figure-4.png" width="1600" height="1251" loading="lazy" decoding="async" alt="Figure 4. Where a retained change is kept and how it is used." />
+              <figcaption><strong>Figure 4. Where a retained change is kept and how it is used.</strong> Each row follows the grasp example from physical experience to the retained change and its immediate use; the italic line names the use. Dashed tags mark secondary handoffs into the learning procedure.</figcaption>
             </figure>
             <figure class="survey-figure">
               <img src="assets/readme/figures/figure-5.png" width="1600" height="588" loading="lazy" decoding="async" alt="Figure 5. Four teaching signals from physical experience." />
@@ -288,8 +288,8 @@
               <article class="system-card"><img class="system-art" src="assets/art/vlaw.webp" width="480" height="358" loading="lazy" decoding="async" alt="" /><div><h5>VLAW</h5><p>Update the world model, then the policy; repeat with new physical data</p></div></article>
             </div>
             <figure class="survey-figure">
-              <img src="assets/readme/figures/figure-6.png" width="1600" height="1257" loading="lazy" decoding="async" alt="Figure 6. Where models, policies, and physical data change in SILVR, RISE, PlayWorld, and VLAW." />
-              <figcaption><strong>Figure 6. Where models, policies, and physical data change in SILVR, RISE, PlayWorld, and VLAW.</strong></figcaption>
+              <img src="assets/readme/figures/figure-6.png" width="1600" height="1256" loading="lazy" decoding="async" alt="Figure 6. Where models, policies, and physical data change." />
+              <figcaption><strong>Figure 6. Where models, policies, and physical data change.</strong> Learning loops of SILVR, RISE, PlayWorld, and VLAW.</figcaption>
             </figure>
           </div>
           <div class="survey-block" id="survey-recursion" data-reveal data-chapter="Toward recursive self-improvement">
@@ -301,8 +301,8 @@
               <img class="block-art" src="assets/art/revise.webp" width="466" height="480" loading="lazy" decoding="async" alt="" />
             </div>
             <figure class="survey-figure">
-              <img src="assets/readme/figures/figure-9.png" width="1600" height="880" loading="lazy" decoding="async" alt="Figure 9. A proposed test of the two links of recursive self-improvement (R1 and R2)." />
-              <figcaption><strong>Figure 9. A proposed test of the two links of recursive self-improvement (R1 and R2).</strong> In R2, self-revision with frozen or acquired knowledge first produces the control or next improver, respectively. Each then revises a learning procedure, which is tested through fresh matched learners under a common, protected outcome check.</figcaption>
+              <img src="assets/readme/figures/figure-9.png" width="1600" height="877" loading="lazy" decoding="async" alt="Figure 9. A proposed test of the two links of recursive self-improvement (R1 and R2)." />
+              <figcaption><strong>Figure 9. A proposed test of the two links of recursive self-improvement (R1 and R2).</strong> In R2, the updated improver revises itself with frozen or acquired knowledge, producing the control or next improver, respectively. Each then revises a learning procedure, which is tested through fresh matched learners under a common, protected outcome check; the next improver must beat both the control and the updated improver; for the updated improver, its learner from R1 serves as the baseline. The R2 control assumes that the acquired knowledge can be withheld without changing the parent improver, as with a memory snapshot; the count of four hardware-trained learners per seed assumes that one candidate per improver survives screening.</figcaption>
             </figure>
             <ul class="recursion-list">
               <li><span class="recursion-dot" aria-hidden="true"></span><div><strong>The first three claims already have support.</strong> Existing studies show behavioral improvement, later-learning benefit, and procedure improvement; some systems also change their improver&#39;s knowledge or tools. For R1 and R2, the survey distinguishes mechanism only, uncontrolled results, and controlled results; evidence for an earlier claim does not establish a later one.</div></li>
@@ -322,13 +322,13 @@
             <div class="problem-grid">
               <article class="problem-card">
                 <h4>Keeping judges aligned</h4>
-                <p class="problem-tags"><span>Distribution shift</span></p>
+                <p class="problem-tags"><span>Robustness to distribution shift</span></p>
                 <p class="problem-question">How can evaluators be refreshed without changing the intended task?</p>
                 <p class="problem-benchmark"><span>Starting benchmark</span>Fixed learner and data; varied evaluator and refresh rule; protected physical outcomes</p>
               </article>
               <article class="problem-card">
                 <h4>Surviving system changes</h4>
-                <p class="problem-tags"><span>Usability</span><span>Distribution shift</span></p>
+                <p class="problem-tags"><span>Usability</span><span>Robustness to distribution shift</span></p>
                 <p class="problem-question">When should an artifact be reused, adapted, revalidated, or retired?</p>
                 <p class="problem-benchmark"><span>Starting benchmark</span>Declared changes to sensing, embodiment, timing, interfaces, and memory schemas, plus gradual drift</p>
               </article>
@@ -352,7 +352,7 @@
               </article>
               <article class="problem-card">
                 <h4>Transferring repair knowledge</h4>
-                <p class="problem-tags"><span>Usability</span><span>Distribution shift</span></p>
+                <p class="problem-tags"><span>Usability</span><span>Robustness to distribution shift</span></p>
                 <p class="problem-question">Does knowledge about earlier repairs improve repairs on new failure families?</p>
                 <p class="problem-benchmark"><span>Starting benchmark</span>The two-round comparison of Figure 9 on held-out failure families</p>
               </article>

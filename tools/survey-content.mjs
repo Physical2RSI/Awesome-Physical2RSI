@@ -37,7 +37,7 @@ export const ABOUT = [
 export const CONDITIONS = [
   ["Informative feedback", "does experience distinguish the remaining learning need?"],
   ["Usability", "can the receiving component represent, optimize, and execute the change?"],
-  ["Distribution shift", "does the change stay useful as the policy, model, task, or hardware changes, including changes caused by improvement itself?"],
+  ["Robustness to distribution shift", "does the change stay useful as the policy, model, task, or hardware changes, including changes caused by improvement itself?"],
   ["Continued practice", "does another informative trial remain safe and affordable?"],
 ];
 export const CONDITIONS_NOTE =
@@ -47,12 +47,12 @@ export const FIGURES = {
   1: ["From digital to physical recursive self-improvement.", "Numbers mark where experience leaves a change: policy (1), world model (2), and external knowledge (3) improve what the robot does; the learning procedure (4) changes how it learns; and the improver, drawn as the loop around the procedure, revises it. RSI further requires that repair knowledge improve the improver and that the improver, once improved, help produce its own next improvement."],
   2: ["Improving what the robot does and how it learns.", "On the left, the learner improves under a fixed recipe and retains the change in its policy, world model, or external knowledge. On the right, the improver revises the learning procedure using retained repair knowledge; the dashed return asks whether that knowledge improves how the next revision is made (R1), and whether the improver, once improved, then helps produce its own next improvement (R2). The bottom row lists the physical limits behind the four conditions that let gains carry forward."],
   3: ["The review at a glance.", "Illustrations in (b) show the four grasp breakdowns from Section 1."],
-  4: ["Where a retained change is kept, and its use.", "Each row follows the grasp example from physical experience to the retained change and its immediate use; the italic line names the use. Dashed tags mark secondary handoffs into the learning procedure."],
+  4: ["Where a retained change is kept and how it is used.", "Each row follows the grasp example from physical experience to the retained change and its immediate use; the italic line names the use. Dashed tags mark secondary handoffs into the learning procedure."],
   5: ["Four teaching signals from physical experience.", "Each column follows the grasp example: what was experienced, what the signal changes in the training data, and representative systems from this section."],
-  6: ["Where models, policies, and physical data change in SILVR, RISE, PlayWorld, and VLAW.", ""],
+  6: ["Where models, policies, and physical data change.", "Learning loops of SILVR, RISE, PlayWorld, and VLAW."],
   7: ["Three forms of external knowledge in the grasp example.", "Each panel shows one saved form of the slip repair and representative systems from this section; reuse on another robot first checks the interface."],
   8: ["Does a revised component help the next learner?", "Two matched learners differ only in the component under test, here an evaluator. Their common outcome check stays fixed and separate from that evaluator; comparing the learners' outcomes tests procedure improvement."],
-  9: ["A proposed test of the two links of recursive self-improvement (R1 and R2).", "In R2, self-revision with frozen or acquired knowledge first produces the control or next improver, respectively. Each then revises a learning procedure, which is tested through fresh matched learners under a common, protected outcome check."],
+  9: ["A proposed test of the two links of recursive self-improvement (R1 and R2).", "In R2, the updated improver revises itself with frozen or acquired knowledge, producing the control or next improver, respectively. Each then revises a learning procedure, which is tested through fresh matched learners under a common, protected outcome check; the next improver must beat both the control and the updated improver; for the updated improver, its learner from R1 serves as the baseline. The R2 control assumes that the acquired knowledge can be withheld without changing the parent improver, as with a memory snapshot; the count of four hardware-trained learners per seed assumes that one candidate per improver survives screening."],
 };
 // file of each figure under assets/readme/figures (Figure 1 is a painting, kept as WebP)
 export const FIGURE_FILE = (number) => `assets/readme/figures/figure-${number}.${number === 1 ? "webp" : "png"}`;
@@ -94,12 +94,12 @@ export const RECURSION = [
 
 // The manuscript's table of open problems: [direction, conditions served, central question, starting benchmark]
 export const PROBLEMS = [
-  ["Keeping judges aligned", ["Distribution shift"], "How can evaluators be refreshed without changing the intended task?", "Fixed learner and data; varied evaluator and refresh rule; protected physical outcomes"],
-  ["Surviving system changes", ["Usability", "Distribution shift"], "When should an artifact be reused, adapted, revalidated, or retired?", "Declared changes to sensing, embodiment, timing, interfaces, and memory schemas, plus gradual drift"],
+  ["Keeping judges aligned", ["Robustness to distribution shift"], "How can evaluators be refreshed without changing the intended task?", "Fixed learner and data; varied evaluator and refresh rule; protected physical outcomes"],
+  ["Surviving system changes", ["Usability", "Robustness to distribution shift"], "When should an artifact be reused, adapted, revalidated, or retired?", "Declared changes to sensing, embodiment, timing, interfaces, and memory schemas, plus gradual drift"],
   ["Budgeting physical resources", ["Continued practice"], "How should robot time, human attention, compute, and wear be spent over time?", "Task sequences with maintenance events under finite capacities; Pareto reporting of resources"],
   ["Finding the bottleneck", ["Informative feedback"], "Which component limits the next improvement?", "Injected policy, model, evaluator, and interface faults with similar terminal outcomes; held-out natural failures"],
   ["Choosing the next experiment", ["Informative feedback"], "Which probe yields evidence that an available update can use?", "Fixed starting system and budget; joint selection versus fixed, information-gain-only, and sequential baselines"],
-  ["Transferring repair knowledge", ["Usability", "Distribution shift"], "Does knowledge about earlier repairs improve repairs on new failure families?", "The two-round comparison of Figure 9 on held-out failure families"],
+  ["Transferring repair knowledge", ["Usability", "Robustness to distribution shift"], "Does knowledge about earlier repairs improve repairs on new failure families?", "The two-round comparison of Figure 9 on held-out failure families"],
 ];
 
 export const PROGRAMS = [

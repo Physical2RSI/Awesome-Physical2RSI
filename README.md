@@ -27,7 +27,7 @@ The survey positions RSI within robot learning and synthesizes pathways from imp
 >
 > - **Informative feedback:** does experience distinguish the remaining learning need?
 > - **Usability:** can the receiving component represent, optimize, and execute the change?
-> - **Distribution shift:** does the change stay useful as the policy, model, task, or hardware changes, including changes caused by improvement itself?
+> - **Robustness to distribution shift:** does the change stay useful as the policy, model, task, or hardware changes, including changes caused by improvement itself?
 > - **Continued practice:** does another informative trial remain safe and affordable?
 >
 > Component-level proxies are not downstream value: collection success says little about training value when kept trajectories omit the action a learner lacks, and prediction or evaluator accuracy says little when the optimizer or controller cannot use the distinction.
@@ -115,14 +115,14 @@ The same physical experience can leave very different kinds of change behind, an
 | **Reuse and recovery** | Memory, skill, contract, program | Retrieve, recover, or synthesize | Reusable execution knowledge | §3.1.3 Memories, skills, code |
 | **Learning procedure** | Collector, evaluator, editor, updater | Choose experience, judge, or construct updates | Better subsequent learning | §3.2 Learning procedures |
 
-<p align="center"><img src="assets/readme/figures/figure-4.png" width="900" alt="Figure 4. Where a retained change is kept, and its use. Each row follows the grasp example from physical experience to the retained change and its immediate use; the italic line names the use. Dashed tags mark secondary handoffs into the learning procedure."></p>
-<p align="center"><sub><b>Figure 4. Where a retained change is kept, and its use.</b> Each row follows the grasp example from physical experience to the retained change and its immediate use; the italic line names the use. Dashed tags mark secondary handoffs into the learning procedure.</sub></p>
+<p align="center"><img src="assets/readme/figures/figure-4.png" width="900" alt="Figure 4. Where a retained change is kept and how it is used. Each row follows the grasp example from physical experience to the retained change and its immediate use; the italic line names the use. Dashed tags mark secondary handoffs into the learning procedure."></p>
+<p align="center"><sub><b>Figure 4. Where a retained change is kept and how it is used.</b> Each row follows the grasp example from physical experience to the retained change and its immediate use; the italic line names the use. Dashed tags mark secondary handoffs into the learning procedure.</sub></p>
 
 <p align="center"><img src="assets/readme/figures/figure-5.png" width="900" alt="Figure 5. Four teaching signals from physical experience. Each column follows the grasp example: what was experienced, what the signal changes in the training data, and representative systems from this section."></p>
 <p align="center"><sub><b>Figure 5. Four teaching signals from physical experience.</b> Each column follows the grasp example: what was experienced, what the signal changes in the training data, and representative systems from this section.</sub></p>
 
-<p align="center"><img src="assets/readme/figures/figure-6.png" width="900" alt="Figure 6. Where models, policies, and physical data change in SILVR, RISE, PlayWorld, and VLAW."></p>
-<p align="center"><sub><b>Figure 6. Where models, policies, and physical data change in SILVR, RISE, PlayWorld, and VLAW.</b></sub></p>
+<p align="center"><img src="assets/readme/figures/figure-6.png" width="900" alt="Figure 6. Where models, policies, and physical data change. Learning loops of SILVR, RISE, PlayWorld, and VLAW."></p>
+<p align="center"><sub><b>Figure 6. Where models, policies, and physical data change.</b> Learning loops of SILVR, RISE, PlayWorld, and VLAW.</sub></p>
 
 <p align="center"><img src="assets/readme/figures/figure-7.png" width="900" alt="Figure 7. Three forms of external knowledge in the grasp example. Each panel shows one saved form of the slip repair and representative systems from this section; reuse on another robot first checks the interface."></p>
 <p align="center"><sub><b>Figure 7. Three forms of external knowledge in the grasp example.</b> Each panel shows one saved form of the slip repair and representative systems from this section; reuse on another robot first checks the interface.</sub></p>
@@ -133,8 +133,8 @@ The same physical experience can leave very different kinds of change behind, an
 
 ## Toward recursive self-improvement
 
-<p align="center"><img src="assets/readme/figures/figure-9.png" width="900" alt="Figure 9. A proposed test of the two links of recursive self-improvement (R1 and R2). In R2, self-revision with frozen or acquired knowledge first produces the control or next improver, respectively. Each then revises a learning procedure, which is tested through fresh matched learners under a common, protected outcome check."></p>
-<p align="center"><sub><b>Figure 9. A proposed test of the two links of recursive self-improvement (R1 and R2).</b> In R2, self-revision with frozen or acquired knowledge first produces the control or next improver, respectively. Each then revises a learning procedure, which is tested through fresh matched learners under a common, protected outcome check.</sub></p>
+<p align="center"><img src="assets/readme/figures/figure-9.png" width="900" alt="Figure 9. A proposed test of the two links of recursive self-improvement (R1 and R2). In R2, the updated improver revises itself with frozen or acquired knowledge, producing the control or next improver, respectively. Each then revises a learning procedure, which is tested through fresh matched learners under a common, protected outcome check; the next improver must beat both the control and the updated improver; for the updated improver, its learner from R1 serves as the baseline. The R2 control assumes that the acquired knowledge can be withheld without changing the parent improver, as with a memory snapshot; the count of four hardware-trained learners per seed assumes that one candidate per improver survives screening."></p>
+<p align="center"><sub><b>Figure 9. A proposed test of the two links of recursive self-improvement (R1 and R2).</b> In R2, the updated improver revises itself with frozen or acquired knowledge, producing the control or next improver, respectively. Each then revises a learning procedure, which is tested through fresh matched learners under a common, protected outcome check; the next improver must beat both the control and the updated improver; for the updated improver, its learner from R1 serves as the baseline. The R2 control assumes that the acquired knowledge can be withheld without changing the parent improver, as with a memory snapshot; the count of four hardware-trained learners per seed assumes that one candidate per improver survives screening.</sub></p>
 
 - **The first three claims already have support.** Existing studies show behavioral improvement, later-learning benefit, and procedure improvement; some systems also change their improver's knowledge or tools. For R1 and R2, the survey distinguishes mechanism only, uncontrolled results, and controlled results; evidence for an earlier claim does not establish a later one.
 - **R1: repair knowledge must improve the improver.** Give the improver, with its earlier and with its acquired repair knowledge, the same new failure histories, tools, objectives, and budget; apply the learning procedures each produces to matched learners and compare common physical outcomes.
@@ -151,12 +151,12 @@ Six directions, the condition each mainly serves, its central question, and a be
 
 | Direction | Serves | Central question | Starting benchmark |
 | --- | --- | --- | --- |
-| **Keeping judges aligned** | Distribution shift | How can evaluators be refreshed without changing the intended task? | Fixed learner and data; varied evaluator and refresh rule; protected physical outcomes |
-| **Surviving system changes** | Usability<br>Distribution shift | When should an artifact be reused, adapted, revalidated, or retired? | Declared changes to sensing, embodiment, timing, interfaces, and memory schemas, plus gradual drift |
+| **Keeping judges aligned** | Robustness to distribution shift | How can evaluators be refreshed without changing the intended task? | Fixed learner and data; varied evaluator and refresh rule; protected physical outcomes |
+| **Surviving system changes** | Usability<br>Robustness to distribution shift | When should an artifact be reused, adapted, revalidated, or retired? | Declared changes to sensing, embodiment, timing, interfaces, and memory schemas, plus gradual drift |
 | **Budgeting physical resources** | Continued practice | How should robot time, human attention, compute, and wear be spent over time? | Task sequences with maintenance events under finite capacities; Pareto reporting of resources |
 | **Finding the bottleneck** | Informative feedback | Which component limits the next improvement? | Injected policy, model, evaluator, and interface faults with similar terminal outcomes; held-out natural failures |
 | **Choosing the next experiment** | Informative feedback | Which probe yields evidence that an available update can use? | Fixed starting system and budget; joint selection versus fixed, information-gain-only, and sequential baselines |
-| **Transferring repair knowledge** | Usability<br>Distribution shift | Does knowledge about earlier repairs improve repairs on new failure families? | The two-round comparison of Figure 9 on held-out failure families |
+| **Transferring repair knowledge** | Usability<br>Robustness to distribution shift | Does knowledge about earlier repairs improve repairs on new failure families? | The two-round comparison of Figure 9 on held-out failure families |
 
 **Three near-term programs follow from this agenda:**
 
