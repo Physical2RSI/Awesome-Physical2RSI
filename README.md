@@ -54,9 +54,16 @@ The survey positions RSI within robot learning and traces pathways from improvin
 
 ## Repository guide
 
-Project source and contributions: [Awesome-Physical2RSI](https://github.com/Physical2RSI/Awesome-Physical2RSI). Website deployment: [physical2rsi.github.io](https://github.com/Physical2RSI/physical2rsi.github.io).
+| **The survey** | **Library and citation** | **Project** |
+| --- | --- | --- |
+| [About the survey](#about-the-survey) | [References](#references) | [Contributing](#contributing) |
+| [Research questions](#research-questions) | [Citation](#citation) | [Contributors](#contributors) |
+| [The review at a glance](#the-review-at-a-glance) | [Star history](#star-history) | [Repository layout](#repository-layout) |
+| [Four uses of retained change](#four-uses-of-retained-change) |  | [License](#license) |
+| [Toward recursive self-improvement](#toward-recursive-self-improvement) |  |  |
+| [Open problems](#open-problems) |  |  |
 
-[About the survey](#about-the-survey) · [Research questions](#research-questions) · [The review at a glance](#the-review-at-a-glance) · [Four uses of retained change](#four-uses-of-retained-change) · [Toward recursive self-improvement](#toward-recursive-self-improvement) · [Open problems](#open-problems) · [References](#references) · [Contributing](#contributing) · [Contributors](#contributors) · [Star history](#star-history) · [Citation](#citation) · [Repository layout](#repository-layout) · [License](#license)
+<sub>Project source and contributions: [Awesome-Physical2RSI](https://github.com/Physical2RSI/Awesome-Physical2RSI) · Website deployment: [physical2rsi.github.io](https://github.com/Physical2RSI/physical2rsi.github.io)</sub>
 
 ## Choose a section
 

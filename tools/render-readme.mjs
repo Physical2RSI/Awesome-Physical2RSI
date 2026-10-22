@@ -185,26 +185,19 @@ export function renderReadme(references) {
   for (const [id, question, detail] of QUESTIONS) add(`| **${id}** | **${question}** | ${detail} |`);
   add("");
 
-  const sections = [
-    "About the survey",
-    "Research questions",
-    "The review at a glance",
-    "Four uses of retained change",
-    "Toward recursive self-improvement",
-    "Open problems",
-    "References",
-    "Contributing",
-    "Contributors",
-    "Star history",
-    "Citation",
-    "Repository layout",
-    "License",
+  // The guide groups every main section into three columns: the survey, the library, and the project.
+  const guide = [
+    ["The survey", ["About the survey", "Research questions", "The review at a glance", "Four uses of retained change", "Toward recursive self-improvement", "Open problems"]],
+    ["Library and citation", ["References", "Citation", "Star history"]],
+    ["Project", ["Contributing", "Contributors", "Repository layout", "License"]],
   ];
   heading("Repository guide");
+  add(`| ${guide.map(([group]) => `**${group}**`).join(" | ")} |`, `| ${guide.map(() => "---").join(" | ")} |`);
+  for (let row = 0; row < Math.max(...guide.map(([, titles]) => titles.length)); row++)
+    add(`| ${guide.map(([, titles]) => (titles[row] ? `[${titles[row]}](#${anchor(titles[row])})` : "")).join(" | ")} |`);
   add(
-    `Project source and contributions: [Awesome-Physical2RSI](${REPO_URL}). Website deployment: [physical2rsi.github.io](https://github.com/Physical2RSI/physical2rsi.github.io).`,
     "",
-    sections.map((title) => `[${title}](#${anchor(title)})`).join(" · "),
+    `<sub>Project source and contributions: [Awesome-Physical2RSI](${REPO_URL}) · Website deployment: [physical2rsi.github.io](https://github.com/Physical2RSI/physical2rsi.github.io)</sub>`,
     "",
     "## Choose a section",
     "",
