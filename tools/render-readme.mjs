@@ -185,31 +185,23 @@ export function renderReadme(references) {
   for (const [id, question, detail] of QUESTIONS) add(`| **${id}** | **${question}** | ${detail} |`);
   add("");
 
-  // The guide groups every main section into three columns: the survey, the library, and the project.
-  const guide = [
-    ["The survey", ["About the survey", "Research questions", "The review at a glance", "Four uses of retained change", "Toward recursive self-improvement", "Open problems"]],
-    ["Library and citation", ["References", "Citation", "Star history"]],
-    ["Project", ["Contributing", "Contributors", "Repository layout", "License"]],
-  ];
+  // The guide: the six section cards, then one centered line for the remaining sections and the repository links.
+  const more = ["Four uses of retained change", "Contributing", "Contributors", "Citation", "Star history", "Repository layout", "License"];
   heading("Repository guide");
-  add(`| ${guide.map(([group]) => `**${group}**`).join(" | ")} |`, `| ${guide.map(() => "---").join(" | ")} |`);
-  for (let row = 0; row < Math.max(...guide.map(([, titles]) => titles.length)); row++)
-    add(`| ${guide.map(([, titles]) => (titles[row] ? `[${titles[row]}](#${anchor(titles[row])})` : "")).join(" | ")} |`);
-  add(
-    "",
-    `<sub>Project source and contributions: [Awesome-Physical2RSI](${REPO_URL}) · Website deployment: [physical2rsi.github.io](https://github.com/Physical2RSI/physical2rsi.github.io)</sub>`,
-    "",
-    "## Choose a section",
-    "",
-    "Select a card to jump directly to its section.",
-    "",
-    '<p align="center">',
-  );
+  add('<p align="center">');
   for (const [i, [key, title, alt]] of CARDS.entries()) {
     if (i === 3) add("  <br>");
     add(`  <a href="#${anchor(title)}">${themed(`assets/readme/card-${key}`, `width="246" alt="${html(alt)}"`)}</a>`);
   }
-  add("</p>", "", "---", "");
+  add(
+    "</p>",
+    "",
+    `<p align="center">${more.map((title) => `<a href="#${anchor(title)}">${html(title)}</a>`).join(" &nbsp;·&nbsp; ")}</p>`,
+    "",
+    `<p align="center"><sub>Source and contributions: <a href="${REPO_URL}">Awesome-Physical2RSI</a> &nbsp;·&nbsp; Website deployment: <a href="https://github.com/Physical2RSI/physical2rsi.github.io">physical2rsi.github.io</a></sub></p>`,
+    "",
+  );
+  add("---", "");
 
   heading("The review at a glance");
   backLinks = true;

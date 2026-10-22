@@ -54,21 +54,6 @@ The survey positions RSI within robot learning and traces pathways from improvin
 
 ## Repository guide
 
-| **The survey** | **Library and citation** | **Project** |
-| --- | --- | --- |
-| [About the survey](#about-the-survey) | [References](#references) | [Contributing](#contributing) |
-| [Research questions](#research-questions) | [Citation](#citation) | [Contributors](#contributors) |
-| [The review at a glance](#the-review-at-a-glance) | [Star history](#star-history) | [Repository layout](#repository-layout) |
-| [Four uses of retained change](#four-uses-of-retained-change) |  | [License](#license) |
-| [Toward recursive self-improvement](#toward-recursive-self-improvement) |  |  |
-| [Open problems](#open-problems) |  |  |
-
-<sub>Project source and contributions: [Awesome-Physical2RSI](https://github.com/Physical2RSI/Awesome-Physical2RSI) · Website deployment: [physical2rsi.github.io](https://github.com/Physical2RSI/physical2rsi.github.io)</sub>
-
-## Choose a section
-
-Select a card to jump directly to its section.
-
 <p align="center">
   <a href="#about-the-survey"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/card-about-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/readme/card-about-light.svg"><img src="assets/readme/card-about-light.svg" width="246" alt="Overview: from experience to recursion"></picture></a>
   <a href="#research-questions"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/card-questions-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/readme/card-questions-light.svg"><img src="assets/readme/card-questions-light.svg" width="246" alt="Research questions: what limits the next gain?"></picture></a>
@@ -78,6 +63,10 @@ Select a card to jump directly to its section.
   <a href="#open-problems"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/card-problems-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/readme/card-problems-light.svg"><img src="assets/readme/card-problems-light.svg" width="246" alt="Open problems: six directions to start"></picture></a>
   <a href="#references"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/card-references-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/readme/card-references-light.svg"><img src="assets/readme/card-references-light.svg" width="246" alt="References: the survey&#39;s library"></picture></a>
 </p>
+
+<p align="center"><a href="#four-uses-of-retained-change">Four uses of retained change</a> &nbsp;·&nbsp; <a href="#contributing">Contributing</a> &nbsp;·&nbsp; <a href="#contributors">Contributors</a> &nbsp;·&nbsp; <a href="#citation">Citation</a> &nbsp;·&nbsp; <a href="#star-history">Star history</a> &nbsp;·&nbsp; <a href="#repository-layout">Repository layout</a> &nbsp;·&nbsp; <a href="#license">License</a></p>
+
+<p align="center"><sub>Source and contributions: <a href="https://github.com/Physical2RSI/Awesome-Physical2RSI">Awesome-Physical2RSI</a> &nbsp;·&nbsp; Website deployment: <a href="https://github.com/Physical2RSI/physical2rsi.github.io">physical2rsi.github.io</a></sub></p>
 
 ---
 
