@@ -95,7 +95,8 @@ export function renderHero() {
       ? ['      <p class="hero-correspondence">* Corresponding author</p>']
       : []),
     '      <div class="hero-actions">',
-    `        <a href="#survey" class="button button-gold">Read the survey${ICON('<path d="M8 2.5v10M3.5 8.5 8 13l4.5-4.5"/>')}</a>`,
+    `        <a href="${SURVEY.paperUrl}" class="button button-gold" target="_blank" rel="noopener noreferrer">${ICON('<path d="M4 1.5h5.5L12.5 4.5v10h-8.5zM9.5 1.5v3h3M6.5 8h4M6.5 10.5h4"/>')}Paper (arXiv)</a>`,
+    `        <a href="#survey" class="button button-glass">Read the summary${ICON('<path d="M8 2.5v10M3.5 8.5 8 13l4.5-4.5"/>')}</a>`,
     `        <a href="#references" class="button button-glass">${ICON('<path d="M2.5 3.5h4l1.5 1.5v8l-1.5-1H2.5zM13.5 3.5h-4L8 5v8l1.5-1h4z"/>')}Reference library</a>`,
     `        <a href="#survey-citation" class="button button-glass">${ICON('<path d="M3.5 2.5h9v11l-4.5-3-4.5 3z"/>')}BibTeX</a>`,
     `        <a href="${REPO_URL}" class="button button-glass" target="_blank" rel="noopener noreferrer">${GITHUB_ICON}GitHub</a>`,
@@ -201,7 +202,7 @@ export function renderSurveySection() {
     `<blockquote class="survey-closing">${html(CLOSING)}</blockquote>`,
   );
   const cite = [
-    `<pre id="survey-bibtex"><code>${html(surveyBibtex(REPO_URL))}</code></pre>`,
+    `<pre id="survey-bibtex"><code>${html(surveyBibtex())}</code></pre>`,
     '<button type="button" class="button button-outline" id="copy-bibtex">Copy BibTeX<img class="icon" src="assets/icons/copy.svg" alt="" width="16" height="16" /></button>',
   ];
   const lines = [

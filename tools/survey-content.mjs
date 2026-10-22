@@ -21,6 +21,10 @@ export const SURVEY = {
   ],
   affiliations: ["NUS", "HUST", "SJTU", "NTU", "HKBU"],
   bibtexKey: "luo2026physicalrsi",
+  // the public record on arXiv (submitted 21 October 2026, primary category cs.RO)
+  arxiv: "2610.29677",
+  paperUrl: "https://arxiv.org/abs/2610.29677",
+  pdfUrl: "https://arxiv.org/pdf/2610.29677",
 };
 
 export const ABOUT = [
@@ -112,7 +116,7 @@ export const CLOSING =
   "Physical recursive self-improvement will be demonstrated not when a robot changes many times, but when knowledge of why one repair worked causally improves how the next repair is made, and when that improved capability, applied to new evidence, helps improve itself again without losing the ability to keep learning.";
 
 // BibTeX entry shared by the README and the website
-export function surveyBibtex(url) {
+export function surveyBibtex() {
   const authors = SURVEY.authors
     .map(([name]) => {
       const parts = name.split(" ");
@@ -120,12 +124,12 @@ export function surveyBibtex(url) {
     })
     .join(" and ");
   return [
-    `@misc{${SURVEY.bibtexKey},`,
-    `  title        = {${SURVEY.title}},`,
-    `  author       = {${authors}},`,
-    `  year         = {${SURVEY.year}},`,
-    `  howpublished = {\\url{${url}}},`,
-    "  note         = {Manuscript}",
+    `@article{${SURVEY.bibtexKey},`,
+    `  title   = {${SURVEY.title}},`,
+    `  author  = {${authors}},`,
+    `  journal = {arXiv preprint arXiv:${SURVEY.arxiv}},`,
+    `  year    = {${SURVEY.year}},`,
+    `  url     = {${SURVEY.paperUrl}}`,
     "}",
   ].join("\n");
 }

@@ -16,6 +16,7 @@ import {
 } from "./public-files.mjs";
 import { renderReadme } from "./render-readme.mjs";
 import { applySurveySection } from "./render-survey.mjs";
+import { SURVEY } from "./survey-content.mjs";
 
 const run = promisify(execFile);
 const references = JSON.parse(
@@ -188,18 +189,10 @@ for (const [file, html] of htmlByFile) {
     for (const candidate of srcset.split(","))
       checkLocalReference(candidate.trim().split(/\s+/)[0], file);
   }
-  assert(
-    !/\bname=["']citation_[^"']+["']/i.test(html),
-    `Unpublished scholarly metadata in ${file}`,
-  );
   for (const [, json] of html.matchAll(
     /<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi,
   )) {
-    const data = JSON.parse(json);
-    assert(
-      !JSON.stringify(data).includes("ScholarlyArticle"),
-      `Unpublished scholarly article metadata in ${file}`,
-    );
+    JSON.parse(json);
   }
 }
 for (const file of files.filter((item) => item.endsWith(".css"))) {
@@ -263,8 +256,12 @@ assert(
   idsByFile.get("index.html").has("references"),
   "Reference section is missing",
 );
-// The survey summary is generated from tools/survey-content.mjs; the paper itself is not public yet, so the
-// scholarly-metadata checks above still apply.
+// The survey summary is generated from tools/survey-content.mjs; the paper is public on arXiv, and the homepage
+// carries its scholarly metadata.
+assert(
+  homepage.includes(`name="citation_arxiv_id" content="${SURVEY.arxiv}"`) && homepage.includes('"ScholarlyArticle"'),
+  "Homepage is missing the arXiv scholarly metadata",
+);
 assert(
   idsByFile.get("index.html").has("survey"),
   "Survey section is missing",

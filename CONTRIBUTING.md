@@ -6,7 +6,7 @@ Make content and website changes in this `Awesome-Physical2RSI` repository. The 
 
 ## Public scope
 
-This project is in its prepublication stage. The README and the website carry a summary of the survey that the authors approved and maintain. Public contributions are limited to bibliography metadata and website infrastructure. Do not attach, paste, or commit unpublished manuscript text, abstracts, taxonomies, analysis, figures, tables, PDFs, Overleaf projects, or source archives. The full survey content will be added after publication.
+The survey is public on arXiv as [arXiv:2610.29677](https://arxiv.org/abs/2610.29677). The README and the website carry a summary of it that the authors maintain. Public contributions are limited to bibliography metadata and website infrastructure; changes to the survey summary come from the authors. Do not attach, paste, or commit unpublished drafts, PDFs, Overleaf projects, or source archives.
 
 ## Reference corrections
 
@@ -44,4 +44,4 @@ README content is generated. Edit `tools/render-readme.mjs` for presentation cha
 
 Describe the problem, the visible result, and the checks you ran. Keep each request focused. Metadata corrections should link to public evidence. For interface changes, describe the viewports and interactions you checked.
 
-The automated checks verify catalog behavior, data shape, generated README consistency, project naming, local site links, the generated survey section, the absence of unpublished scholarly metadata, and the public build boundary. They do not establish the scientific accuracy of a reference or approve unpublished material for release.
+The automated checks verify catalog behavior, data shape, generated README consistency, project naming, local site links, the generated survey section, the paper's arXiv scholarly metadata, and the public build boundary. They do not establish the scientific accuracy of a reference or approve new survey material for release.

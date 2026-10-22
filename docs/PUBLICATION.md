@@ -1,24 +1,17 @@
-# Publication checklist
+# Publication record
 
 ## Current release
 
-The manuscript is not yet public. With the authors' approval, the README and the website's survey section carry a summary of the survey: the title and subtitle, author names, affiliations, and the corresponding-author mark, the research questions, the framework and its four conditions, Figures 1 to 9, the survey's robot illustrations, the open problems, a teaser illustration, and a manuscript citation. The text lives in `tools/survey-content.mjs` and the figures in `assets/readme/figures/`; `npm run readme` renders both the README and the website section, and `tools/check.mjs` fails if either is out of date. Keep the content in step with the manuscript.
+The survey is public on arXiv as [arXiv:2610.29677](https://arxiv.org/abs/2610.29677) (submitted 21 October 2026, primary category cs.RO). The README and the website's survey section carry a summary of it, with the authors' approval: the title, author names, affiliations, and the corresponding-author mark, the research questions, the framework and its four conditions, Figures 1 to 9, the survey's robot illustrations, the open problems, and a teaser illustration. The text lives in `tools/survey-content.mjs` and the figures in `assets/readme/figures/`; `npm run readme` renders both the README and the website section, and `tools/check.mjs` fails if either is out of date. Keep the content in step with the latest arXiv version.
 
-Until the paper is public, the site carries no scholarly metadata (`citation_*` meta tags or `ScholarlyArticle` structured data), and the checks continue to enforce this. No manuscript PDF, source, or other figure is published.
+The website links to the arXiv record from its hero, the README carries an arXiv badge, and both cite the arXiv preprint. The homepage carries `citation_*` meta tags and `ScholarlyArticle` structured data for the arXiv record, and `tools/check.mjs` requires them. The site links to the arXiv PDF and does not host the manuscript PDF, source, or any other figure.
 
-The latest full synchronization was checked against the author-supplied manuscript dated 18 October 2026. The author list was updated on 20 October 2026 to add Yingtian Zou (SJTU) immediately after Ran Zhang. The shared content records eleven authors across five affiliations, including the corresponding-author mark, and the citation uses that author order. The four conditions, research questions, five-section outline, six open problems, and all nine figure assets were checked against the manuscript. Existing figure assets match the current diagrams and are retained. All 343 bibliography records match the supplied bibliography, with the previously verified PISA publication link preserved where the source omits it.
+The title, the twelve authors and their order, and the date were checked against the arXiv record on 22 October 2026. The figures, captions, summary text, and all 379 bibliography records were checked against the manuscript of 21 October 2026, with the previously verified PISA publication link preserved where the source omits it.
 
-## When the paper is public
+## When a new arXiv version appears
 
-This checklist describes the full release; it does not authorize one.
-
-- Confirm the paper is publicly published and the authors have approved the intended public materials.
-- Verify the final public title, author names and order, affiliations, publication URL, date, and citation against the published record, and update `tools/survey-content.mjs` to match.
-- Review the license and redistribution terms for every proposed figure, table, and downloadable file.
-- Add the agreed public content through a reviewed pull request with clear provenance.
-- Add the paper link, and the scholarly metadata the published record supports, and relax the prepublication checks in the same pull request.
-- Update the README generator (paper link, badge, and citation), website metadata, structured data, social preview, and release wording together.
-- Keep the public build allowlist explicit. Add a manuscript download only when redistribution has been separately approved.
+- Verify the title, author names and order, affiliations, and date against the arXiv record, and update `tools/survey-content.mjs` and the `citation_*` metadata in `index.html` to match.
+- Re-crop Figures 1 to 9 from the new version, update their captions, and resynchronize the summary text and the bibliography.
 - Run the full build and check desktop, mobile, keyboard navigation, citation copying, and links on the deployed site.
 
-Until then, preserve the public project name **Toward Recursive Self-Improvement in Physical AI** (short form: **Physical2RSI**) and the public reference metadata. Do not publish survey content beyond what the authors approved for the README and the website's survey section.
+Preserve the public project name **Toward Recursive Self-Improvement in Physical AI** (short form: **Physical2RSI**) and the public reference metadata.

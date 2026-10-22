@@ -4,6 +4,7 @@
 
   <p><strong><em>⭐ Star us if you find this useful!</em></strong></p>
 
+  <a href="https://arxiv.org/abs/2610.29677"><img src="https://img.shields.io/static/v1?label=&amp;message=arXiv+2610.29677&amp;color=b31b1b&amp;style=flat-square" alt="arXiv 2610.29677" height="18"></a>
   <a href="https://physical2rsi.github.io/"><img src="https://img.shields.io/static/v1?label=&amp;message=Project+website&amp;color=087f80&amp;style=flat-square" alt="Project website" height="18"></a>
   <a href="https://physical2rsi.github.io/#references"><img src="https://img.shields.io/static/v1?label=&amp;message=379+references&amp;color=416cb3&amp;style=flat-square" alt="379 references" height="18"></a>
   <a href="LICENSE"><img src="https://img.shields.io/static/v1?label=&amp;message=Code%3A+MIT&amp;color=65716e&amp;style=flat-square" alt="Code: MIT" height="18"></a>
@@ -801,12 +802,12 @@ Thanks to everyone who has corrected references and improved the project.
 If you find the survey or the reference library useful, please cite:
 
 ```bibtex
-@misc{luo2026physicalrsi,
-  title        = {Toward Recursive Self-Improvement in Physical AI},
-  author       = {Luo, Meng and Bai, Zechen and Xu, Shanqing and Li, Yanlin and Li, Kaixin and Qian, Mengchen and Lu, Weifeng and Zhang, Ran and Zou, Yingtian and Luo, Ziyang and Chen, Wei and Lin, Hongzhan},
-  year         = {2026},
-  howpublished = {\url{https://github.com/Physical2RSI/Awesome-Physical2RSI}},
-  note         = {Manuscript}
+@article{luo2026physicalrsi,
+  title   = {Toward Recursive Self-Improvement in Physical AI},
+  author  = {Luo, Meng and Bai, Zechen and Xu, Shanqing and Li, Yanlin and Li, Kaixin and Qian, Mengchen and Lu, Weifeng and Zhang, Ran and Zou, Yingtian and Luo, Ziyang and Chen, Wei and Lin, Hongzhan},
+  journal = {arXiv preprint arXiv:2610.29677},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2610.29677}
 }
 ```
 
