@@ -10,7 +10,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/static/v1?label=&amp;message=Code%3A+MIT&amp;color=65716e&amp;style=flat-square" alt="Code: MIT" height="18"></a>
   <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome" height="18"></a>
 
-  <p>Meng Luo<sup>1</sup> · Zechen Bai<sup>1</sup> · Shanqing Xu<sup>2</sup> · Yanlin Li<sup>1</sup> · Kaixin Li<sup>1</sup> · Mengchen Qian<sup>2</sup> · Weifeng Lu<sup>3</sup> · Ran Zhang<sup>4</sup> · Yingtian Zou<sup>3</sup> · Ziyang Luo<sup>5</sup> · Wei Chen<sup>2</sup> · Hongzhan Lin<sup>1*</sup></p>
+  <p>Meng&nbsp;Luo<sup>1</sup> · Zechen&nbsp;Bai<sup>1</sup> · Shanqing&nbsp;Xu<sup>2</sup> · Yanlin&nbsp;Li<sup>1</sup> · Kaixin&nbsp;Li<sup>1</sup> · Mengchen&nbsp;Qian<sup>2</sup> · Weifeng&nbsp;Lu<sup>3</sup> · Ran&nbsp;Zhang<sup>4</sup> · Yingtian&nbsp;Zou<sup>3</sup> · Ziyang&nbsp;Luo<sup>5</sup> · Wei&nbsp;Chen<sup>2</sup> · Hongzhan&nbsp;Lin<sup>1*</sup></p>
   <p><sub><sup>1</sup> NUS &nbsp;·&nbsp; <sup>2</sup> HUST &nbsp;·&nbsp; <sup>3</sup> SJTU &nbsp;·&nbsp; <sup>4</sup> NTU &nbsp;·&nbsp; <sup>5</sup> HKBU</sub></p>
   <p><sub>* Corresponding author</sub></p>
 </div>

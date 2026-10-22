@@ -161,7 +161,7 @@ export function renderReadme(references) {
     "",
     "  <p>" +
       SURVEY.authors
-        .map(([name, affiliations, corresponding]) => `${html(name)}<sup>${affiliations.join(",")}${corresponding ? "*" : ""}</sup>`)
+        .map(([name, affiliations, corresponding]) => `${html(name).replaceAll(" ", "&nbsp;")}<sup>${affiliations.join(",")}${corresponding ? "*" : ""}</sup>`)
         .join(" · ") +
       "</p>",
     `  <p><sub>${SURVEY.affiliations.map((name, i) => `<sup>${i + 1}</sup> ${html(name)}`).join(" &nbsp;·&nbsp; ")}</sub></p>`,

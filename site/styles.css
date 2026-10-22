@@ -310,6 +310,10 @@ button {
   flex-wrap: wrap;
   gap: 2px 12px;
 }
+.hero-authors > span,
+.hero-affiliations > span {
+  white-space: nowrap;
+}
 .hero-authors {
   margin: 0 0 6px;
   font-size: 13px;
