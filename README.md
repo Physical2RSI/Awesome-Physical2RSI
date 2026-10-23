@@ -5,6 +5,7 @@
   <p><strong><em>⭐ Star us if you find this useful!</em></strong></p>
 
   <a href="https://arxiv.org/abs/2610.29677"><img src="https://img.shields.io/static/v1?label=&amp;message=arXiv+2610.29677&amp;color=b31b1b&amp;style=flat-square" alt="arXiv 2610.29677" height="18"></a>
+  <a href="https://huggingface.co/papers/2610.29677"><img src="https://img.shields.io/static/v1?label=&amp;message=%F0%9F%A4%97+Hugging+Face+Papers&amp;color=ffd21e&amp;style=flat-square" alt="🤗 Hugging Face Papers" height="18"></a>
   <a href="https://physical2rsi.github.io/"><img src="https://img.shields.io/static/v1?label=&amp;message=Project+website&amp;color=087f80&amp;style=flat-square" alt="Project website" height="18"></a>
   <a href="https://physical2rsi.github.io/#references"><img src="https://img.shields.io/static/v1?label=&amp;message=379+references&amp;color=416cb3&amp;style=flat-square" alt="379 references" height="18"></a>
   <a href="LICENSE"><img src="https://img.shields.io/static/v1?label=&amp;message=Code%3A+MIT&amp;color=65716e&amp;style=flat-square" alt="Code: MIT" height="18"></a>

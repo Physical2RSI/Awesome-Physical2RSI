@@ -154,6 +154,7 @@ export function renderReadme(references) {
     "  <p><strong><em>⭐ Star us if you find this useful!</em></strong></p>",
     "",
     `  <a href="${SURVEY.paperUrl}">${badge(`arXiv ${SURVEY.arxiv}`, "b31b1b")}</a>`,
+    `  <a href="${SURVEY.huggingFaceUrl}">${badge("🤗 Hugging Face Papers", "ffd21e")}</a>`,
     `  <a href="${SITE_URL}">${badge("Project website", "087f80")}</a>`,
     `  <a href="${SITE_URL}#references">${badge(`${references.length} references`, "416cb3")}</a>`,
     `  <a href="LICENSE">${badge("Code: MIT", "65716e")}</a>`,

@@ -25,6 +25,7 @@ export const SURVEY = {
   arxiv: "2610.29677",
   paperUrl: "https://arxiv.org/abs/2610.29677",
   pdfUrl: "https://arxiv.org/pdf/2610.29677",
+  huggingFaceUrl: "https://huggingface.co/papers/2610.29677",
 };
 
 export const ABOUT = [
