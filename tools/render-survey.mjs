@@ -203,7 +203,8 @@ export function renderSurveySection() {
     `<blockquote class="survey-closing">${html(CLOSING)}</blockquote>`,
   );
   const cite = [
-    `<pre id="survey-bibtex"><code>${html(surveyBibtex())}</code></pre>`,
+    // one block per line, so a long value wraps with a hanging indent; textContent keeps the newlines for copying
+    `<pre id="survey-bibtex"><code>${surveyBibtex().split("\n").map((line) => `<span>${html(line)}</span>`).join("\n")}</code></pre>`,
     '<button type="button" class="button button-outline" id="copy-bibtex">Copy BibTeX<img class="icon" src="assets/icons/copy.svg" alt="" width="16" height="16" /></button>',
   ];
   const lines = [

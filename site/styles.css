@@ -1402,12 +1402,19 @@ h2 {
 .survey-cite pre {
   margin: 0 0 14px;
   padding: 16px 18px;
-  overflow-x: auto;
+  white-space: normal;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--wash);
   font-size: 12px;
   line-height: 1.7;
+}
+.survey-cite pre span {
+  display: block;
+  padding-left: 12ch;
+  text-indent: -12ch;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
 .publication-section {
   background: #f3f6f4;
