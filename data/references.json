@@ -6014,6 +6014,21 @@
     "doi": ""
   },
   {
+    "id": "liu2026physicalrsi",
+    "title": "Toward Physical Recursive Self-Improvement: A Call for Body-Control Co-Design for Humanoid Robot",
+    "authors": [
+      "Guiliang Liu",
+      "Bo Yue",
+      "Yi Jin Kim",
+      "Kui Jia"
+    ],
+    "year": 2026,
+    "venue": "NeurIPS 2026 Position Paper Track",
+    "type": "conference",
+    "url": "https://arxiv.org/abs/2510.03081v2",
+    "doi": "10.48550/arXiv.2510.03081"
+  },
+  {
     "id": "lopezpaz2017gem",
     "title": "Gradient Episodic Memory for Continual Learning",
     "authors": [

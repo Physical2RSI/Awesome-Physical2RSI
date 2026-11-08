@@ -7,7 +7,7 @@
   <a href="https://arxiv.org/abs/2610.29677"><img src="https://img.shields.io/static/v1?label=&amp;message=arXiv+2610.29677&amp;color=b31b1b&amp;style=flat-square" alt="arXiv 2610.29677" height="18"></a>
   <a href="https://huggingface.co/papers/2610.29677"><img src="https://img.shields.io/static/v1?label=&amp;message=%F0%9F%A4%97+Hugging+Face+Papers&amp;color=ffd21e&amp;style=flat-square" alt="🤗 Hugging Face Papers" height="18"></a>
   <a href="https://physical2rsi.github.io/"><img src="https://img.shields.io/static/v1?label=&amp;message=Project+website&amp;color=087f80&amp;style=flat-square" alt="Project website" height="18"></a>
-  <a href="https://physical2rsi.github.io/#references"><img src="https://img.shields.io/static/v1?label=&amp;message=379+references&amp;color=416cb3&amp;style=flat-square" alt="379 references" height="18"></a>
+  <a href="https://physical2rsi.github.io/#references"><img src="https://img.shields.io/static/v1?label=&amp;message=380+references&amp;color=416cb3&amp;style=flat-square" alt="380 references" height="18"></a>
   <a href="LICENSE"><img src="https://img.shields.io/static/v1?label=&amp;message=Code%3A+MIT&amp;color=65716e&amp;style=flat-square" alt="Code: MIT" height="18"></a>
   <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome" height="18"></a>
 
@@ -170,11 +170,11 @@ Six directions, the condition each mainly serves, its central question, and a be
 
 ## References
 
-379 bibliographic records from the survey, ordered from newest to oldest. Counts describe this collection; publication badges indicate the venue or record type. Inclusion does not imply that a paper demonstrates RSI. The [project website](https://physical2rsi.github.io/#references) adds search and filters.
+380 bibliographic records from the survey, ordered from newest to oldest. Counts describe this collection; publication badges indicate the venue or record type. Inclusion does not imply that a paper demonstrates RSI. The [project website](https://physical2rsi.github.io/#references) adds search and filters.
 
 | Conference | Journal | Preprint | Book | Other |
 | ---: | ---: | ---: | ---: | ---: |
-| 153 | 27 | 194 | 4 | 1 |
+| 154 | 27 | 194 | 4 | 1 |
 
 <img src="https://img.shields.io/static/v1?label=&amp;message=Conference&amp;color=416cb3&amp;style=flat-square" alt="Conference" height="18"> <img src="https://img.shields.io/static/v1?label=&amp;message=Journal&amp;color=087f80&amp;style=flat-square" alt="Journal" height="18"> <img src="https://img.shields.io/static/v1?label=&amp;message=Preprint&amp;color=a04865&amp;style=flat-square" alt="Preprint" height="18"> <img src="https://img.shields.io/static/v1?label=&amp;message=Book&amp;color=99700c&amp;style=flat-square" alt="Book" height="18"> <img src="https://img.shields.io/static/v1?label=&amp;message=Other&amp;color=65716e&amp;style=flat-square" alt="Other" height="18">
 
@@ -324,6 +324,7 @@ Six directions, the condition each mainly serves, its central question, and a be
 - The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement. [[paper](<https://arxiv.org/abs/2609.11873v3>)] <img src="https://img.shields.io/static/v1?label=&amp;message=arXiv&amp;color=a04865&amp;style=flat-square" alt="arXiv" height="18">
 - The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators. [[paper](<https://arxiv.org/abs/2606.26294v3>)] <img src="https://img.shields.io/static/v1?label=&amp;message=arXiv&amp;color=a04865&amp;style=flat-square" alt="arXiv" height="18">
 - TORL-VLA: Tactile Guided Online Reinforcement Learning for Contact-Rich Manipulation. [[paper](<https://arxiv.org/abs/2606.09337v3>)] <img src="https://img.shields.io/static/v1?label=&amp;message=arXiv&amp;color=a04865&amp;style=flat-square" alt="arXiv" height="18">
+- Toward Physical Recursive Self-Improvement: A Call for Body-Control Co-Design for Humanoid Robot. [[paper](<https://arxiv.org/abs/2510.03081v2>)] <img src="https://img.shields.io/static/v1?label=&amp;message=NeurIPS&amp;color=416cb3&amp;style=flat-square" alt="NeurIPS 2026 Position Paper Track" height="18">
 - Towards Human-like Physical Intelligence: Lifelong Vision-Language-Action Learning for Robotic Manipulation. [[paper](<https://arxiv.org/abs/2607.14852>)] <img src="https://img.shields.io/static/v1?label=&amp;message=arXiv&amp;color=a04865&amp;style=flat-square" alt="arXiv" height="18">
 - Trust-Calibrated VLA Policy Post-Training with Evolving Imagination. [[paper](<https://arxiv.org/abs/2610.16517v1>)] <img src="https://img.shields.io/static/v1?label=&amp;message=arXiv&amp;color=a04865&amp;style=flat-square" alt="arXiv" height="18">
 - Uncertainty Quantification for Flow-Based Generalist Robot Policies. [[paper](<https://arxiv.org/abs/2606.18043v2>)] <img src="https://img.shields.io/static/v1?label=&amp;message=arXiv&amp;color=a04865&amp;style=flat-square" alt="arXiv" height="18">
